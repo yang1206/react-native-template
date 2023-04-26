@@ -13,6 +13,8 @@
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		1A396EA5ECB532A906879DF0 /* ExpoModulesProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC73E80512E47538D0BDAF9F /* ExpoModulesProvider.swift */; };
+		61112EE229F82274009C772D /* bundle in Resources */ = {isa = PBXBuildFile; fileRef = 61112EE129F82274009C772D /* bundle */; };
+		612D1CC729F89F5A000E97BB /* main.jsbundle in Resources */ = {isa = PBXBuildFile; fileRef = 612D1CC629F89F5A000E97BB /* main.jsbundle */; };
 		7699B88040F8A987B510C191 /* libPods-RN_TS-RN_TSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19F6CBCC0A4E27FBF8BF4A61 /* libPods-RN_TS-RN_TSTests.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
 		8FC11CEE7B47E744C982EA39 /* ExpoModulesProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD8F67828C6CE6AC8A474B02 /* ExpoModulesProvider.swift */; };
@@ -43,6 +45,8 @@
 		5709B34CF0A7D63546082F79 /* Pods-RN_TS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RN_TS.release.xcconfig"; path = "Target Support Files/Pods-RN_TS/Pods-RN_TS.release.xcconfig"; sourceTree = "<group>"; };
 		5B7EB9410499542E8C5724F5 /* Pods-RN_TS-RN_TSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RN_TS-RN_TSTests.debug.xcconfig"; path = "Target Support Files/Pods-RN_TS-RN_TSTests/Pods-RN_TS-RN_TSTests.debug.xcconfig"; sourceTree = "<group>"; };
 		5DCACB8F33CDC322A6C60F78 /* libPods-RN_TS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RN_TS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		61112EE129F82274009C772D /* bundle */ = {isa = PBXFileReference; lastKnownFileType = folder; path = bundle; sourceTree = "<group>"; };
+		612D1CC629F89F5A000E97BB /* main.jsbundle */ = {isa = PBXFileReference; lastKnownFileType = text; path = main.jsbundle; sourceTree = "<group>"; };
 		6167259929F0D0BC001FC906 /* RN_TS copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "RN_TS copy-Info.plist"; path = "/Users/yangjunwei/Desktop/React-Native-Template/ios/RN_TS copy-Info.plist"; sourceTree = "<absolute>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = RN_TS/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		89C6BE57DB24E9ADA2F236DE /* Pods-RN_TS-RN_TSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RN_TS-RN_TSTests.release.xcconfig"; path = "Target Support Files/Pods-RN_TS-RN_TSTests/Pods-RN_TS-RN_TSTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -99,6 +103,7 @@
 		13B07FAE1A68108700A75B9A /* RN_TS */ = {
 			isa = PBXGroup;
 			children = (
+				61112EE129F82274009C772D /* bundle */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.mm */,
 				13B07FB51A68108700A75B9A /* Images.xcassets */,
@@ -129,6 +134,7 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
+				612D1CC629F89F5A000E97BB /* main.jsbundle */,
 				13B07FAE1A68108700A75B9A /* RN_TS */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
 				00E356EF1AD99517003FC87E /* RN_TSTests */,
@@ -274,6 +280,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				612D1CC729F89F5A000E97BB /* main.jsbundle in Resources */,
+				61112EE229F82274009C772D /* bundle in Resources */,
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 			);

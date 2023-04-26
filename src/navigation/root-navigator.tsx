@@ -5,7 +5,6 @@ import React, { useEffect } from 'react'
 import { NavigationContainer } from './navigation-container'
 import { TabNavigator } from './tab-navigator'
 import { AuthNavigator } from './auth-navigator'
-import { CameraNavigator } from './camera-navigator'
 import { useAuthStore } from '@/store'
 import { AboutScreen } from '@/screens'
 import { useIsFirstTime, useThemeStore } from '@/hooks'
@@ -14,7 +13,6 @@ import { Onboarding } from '@/screens/onboarding'
 export type AppStackParamList = {
   Tab: undefined
   FeedNavigator: undefined
-  CameraNavigator: undefined
   About: undefined
   Auth: undefined
   Onboarding: undefined
@@ -57,9 +55,6 @@ export function Root() {
                   : (
                     <>
                       <Stack.Screen name="Tab" component={TabNavigator} />
-                      <Stack.Screen options={{
-                        headerShown: false,
-                      }} name="CameraNavigator" component={CameraNavigator} />
                       <Stack.Screen options={{
                         headerShown: true,
                         headerStyle: {

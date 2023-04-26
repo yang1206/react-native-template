@@ -8,7 +8,7 @@ import type { IconProps } from 'react-native-vector-icons/Icon'
 import { useNavigation } from '@react-navigation/native'
 import { FeedNavigator } from './feed-navigator'
 import { HomeScreen, UserScreen } from '@/screens'
-import { TouchableOpacity, colors } from '@/ui'
+import { colors } from '@/ui'
 import { t } from '@/locales'
 
 export type TabParamList = {
@@ -97,13 +97,6 @@ export function TabNavigator() {
               options={{
                 title: label,
                 headerShown: name !== 'FeedNavigator',
-                headerRight: name === 'Home'
-                  ? () => (
-                  <TouchableOpacity onPress={() => { navigate('CameraNavigator') }}>
-                      <Ionicons color={colors.primary[400]} name="camera-outline" size={30} style={{ marginRight: 10 }}></Ionicons>
-                  </TouchableOpacity>
-                    )
-                  : () => <></>,
               }}
             />
           )
