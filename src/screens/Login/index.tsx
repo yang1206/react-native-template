@@ -10,7 +10,7 @@ import Animated, {
 import { LinearGradient } from 'expo-linear-gradient'
 import type { PanGestureHandlerGestureEvent } from 'react-native-gesture-handler'
 import { PanGestureHandler } from 'react-native-gesture-handler'
-import { BlurView } from 'expo-blur'
+import { BlurView } from '@react-native-community/blur'
 import TopSection from './TopSection'
 import BottomForm from './BottomForm'
 import { SafeAreaView, StatusBar, View } from '@/ui'
@@ -62,9 +62,9 @@ function BottomUpAnimation() {
         <LinearGradient colors={['#4c669f', '#3b5998', '#192f6a']} style={styles.gradient}>
           <StatusBar isDarkStyle={!isDark} />
           <View style={styles.contentWrapper}>
-            <BlurView style={styles.blur} intensity={55}
-              tint="light"
-            />
+            <BlurView style={styles.blur} blurAmount={25}
+              blurType="light"
+              reducedTransparencyFallbackColor="rgba(140, 140, 140, 0.3)" />
             {/* 顶部欢迎词与图标 */}
             <TopSection />
 

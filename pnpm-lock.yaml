@@ -7,6 +7,9 @@ dependencies:
   '@hookform/resolvers':
     specifier: ^3.1.0
     version: 3.1.0(react-hook-form@7.43.9)
+  '@react-native-community/blur':
+    specifier: ^4.3.0
+    version: 4.3.0(react-native@0.71.7)(react@18.2.0)
   '@react-native-community/netinfo':
     specifier: ^9.3.7
     version: 9.3.9(react-native@0.71.7)
@@ -2562,6 +2565,16 @@ packages:
     dependencies:
       mkdirp: 1.0.4
       rimraf: 3.0.2
+    dev: false
+
+  /@react-native-community/blur@4.3.0(react-native@0.71.7)(react@18.2.0):
+    resolution: {integrity: sha512-d6phh39kKcbZ4IluDftiVWqfeFOgjl1AbQWzN47x+hLKQ5GvQJ6QhRvgAuDZ+xbJksrbXgNpMjVYkjsbcVehxg==}
+    peerDependencies:
+      react: '*'
+      react-native: '*'
+    dependencies:
+      react: 18.2.0
+      react-native: 0.71.7(@babel/core@7.21.4)(@babel/preset-env@7.21.4)(react@18.2.0)
     dev: false
 
   /@react-native-community/cli-clean@10.1.1:
