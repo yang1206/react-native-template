@@ -4,11 +4,11 @@ PODS:
   - DoubleConversion (1.1.6)
   - EXConstants (14.2.1):
     - ExpoModulesCore
-  - Expo (48.0.15):
+  - Expo (48.0.16):
     - ExpoModulesCore
   - ExpoLinearGradient (12.1.2):
     - ExpoModulesCore
-  - ExpoModulesCore (1.2.6):
+  - ExpoModulesCore (1.2.7):
     - React-Core
     - React-RCTAppDelegate
     - ReactCommon/turbomodule/core
@@ -466,7 +466,7 @@ PODS:
     - React-Core
   - RNPermissions (3.8.0):
     - React-Core
-  - RNReanimated (2.17.0):
+  - RNReanimated (2.14.4):
     - DoubleConversion
     - FBLazyVector
     - FBReactNativeSpec
@@ -512,11 +512,11 @@ PODS:
 DEPENDENCIES:
   - boost (from `../node_modules/react-native/third-party-podspecs/boost.podspec`)
   - DoubleConversion (from `../node_modules/react-native/third-party-podspecs/DoubleConversion.podspec`)
-  - "EXConstants (from `../node_modules/.pnpm/expo-constants@14.2.1_expo@48.0.15/node_modules/expo-constants/ios`)"
-  - "Expo (from `../node_modules/.pnpm/expo@48.0.15_@babel+core@7.21.8/node_modules/expo`)"
-  - "ExpoLinearGradient (from `../node_modules/.pnpm/expo-linear-gradient@12.1.2_expo@48.0.15/node_modules/expo-linear-gradient/ios`)"
-  - "ExpoModulesCore (from `../node_modules/.pnpm/expo-modules-core@1.2.6/node_modules/expo-modules-core`)"
-  - "EXSplashScreen (from `../node_modules/.pnpm/expo-splash-screen@0.18.2_expo-modules-autolinking@1.2.0_expo@48.0.15/node_modules/expo-splash-screen/ios`)"
+  - "EXConstants (from `../node_modules/.pnpm/expo-constants@14.2.1_expo@48.0.16/node_modules/expo-constants/ios`)"
+  - "Expo (from `../node_modules/.pnpm/expo@48.0.16_@babel+core@7.21.8/node_modules/expo`)"
+  - "ExpoLinearGradient (from `../node_modules/.pnpm/expo-linear-gradient@12.1.2_expo@48.0.16/node_modules/expo-linear-gradient/ios`)"
+  - "ExpoModulesCore (from `../node_modules/.pnpm/expo-modules-core@1.2.7/node_modules/expo-modules-core`)"
+  - "EXSplashScreen (from `../node_modules/.pnpm/expo-splash-screen@0.18.2_expo-modules-autolinking@1.2.0_expo@48.0.16/node_modules/expo-splash-screen/ios`)"
   - FBLazyVector (from `../node_modules/react-native/Libraries/FBLazyVector`)
   - FBReactNativeSpec (from `../node_modules/react-native/React/FBReactNativeSpec`)
   - Flipper (= 0.189.0)
@@ -618,15 +618,15 @@ EXTERNAL SOURCES:
   DoubleConversion:
     :podspec: "../node_modules/react-native/third-party-podspecs/DoubleConversion.podspec"
   EXConstants:
-    :path: "../node_modules/.pnpm/expo-constants@14.2.1_expo@48.0.15/node_modules/expo-constants/ios"
+    :path: "../node_modules/.pnpm/expo-constants@14.2.1_expo@48.0.16/node_modules/expo-constants/ios"
   Expo:
-    :path: "../node_modules/.pnpm/expo@48.0.15_@babel+core@7.21.8/node_modules/expo"
+    :path: "../node_modules/.pnpm/expo@48.0.16_@babel+core@7.21.8/node_modules/expo"
   ExpoLinearGradient:
-    :path: "../node_modules/.pnpm/expo-linear-gradient@12.1.2_expo@48.0.15/node_modules/expo-linear-gradient/ios"
+    :path: "../node_modules/.pnpm/expo-linear-gradient@12.1.2_expo@48.0.16/node_modules/expo-linear-gradient/ios"
   ExpoModulesCore:
-    :path: "../node_modules/.pnpm/expo-modules-core@1.2.6/node_modules/expo-modules-core"
+    :path: "../node_modules/.pnpm/expo-modules-core@1.2.7/node_modules/expo-modules-core"
   EXSplashScreen:
-    :path: "../node_modules/.pnpm/expo-splash-screen@0.18.2_expo-modules-autolinking@1.2.0_expo@48.0.15/node_modules/expo-splash-screen/ios"
+    :path: "../node_modules/.pnpm/expo-splash-screen@0.18.2_expo-modules-autolinking@1.2.0_expo@48.0.16/node_modules/expo-splash-screen/ios"
   FBLazyVector:
     :path: "../node_modules/react-native/Libraries/FBLazyVector"
   FBReactNativeSpec:
@@ -725,9 +725,9 @@ SPEC CHECKSUMS:
   CocoaAsyncSocket: 065fd1e645c7abab64f7a6a2007a48038fdc6a99
   DoubleConversion: 5189b271737e1565bdce30deb4a08d647e3f5f54
   EXConstants: f348da07e21b23d2b085e270d7b74f282df1a7d9
-  Expo: 62bba165c9cd30a2983176e7d975ae688b6334b6
+  Expo: b1457fbd549c00d17b62c402bc98c8229aace6d8
   ExpoLinearGradient: 8eaab76b7f55c612ed8348c8be8c2a18a9b4529f
-  ExpoModulesCore: 6e0259511f4c4341b6b8357db393624df2280828
+  ExpoModulesCore: 653958063a301098b541ae4dfed1ac0b98db607b
   EXSplashScreen: 0e0a9ba0cf7553094e93213099bd7b42e6e237e9
   FBLazyVector: a89a0525bc7ca174675045c2b492b5280d5a2470
   FBReactNativeSpec: 6cfbf4e0f56a9ad7943fc669a7761ab87d649a57
@@ -786,7 +786,7 @@ SPEC CHECKSUMS:
   RNGestureHandler: 071d7a9ad81e8b83fe7663b303d132406a7d8f39
   RNLocalize: 5944c97d2fe8150913a51ddd5eab4e23a82bd80d
   RNPermissions: b0e38eca4ce809f39a1655c7dfb8fe957b844cfc
-  RNReanimated: 94ca6e72117e9d0bf2ee1d20ae940fc328bca311
+  RNReanimated: b767bda4006adcb068e51162fab50997c16df5b2
   RNScreens: 218801c16a2782546d30bd2026bb625c0302d70f
   RNVectorIcons: fcc2f6cb32f5735b586e66d14103a74ce6ad61f8
   SDWebImage: a7f831e1a65eb5e285e3fb046a23fcfbf08e696d
@@ -795,6 +795,6 @@ SPEC CHECKSUMS:
   Yoga: d56980c8914db0b51692f55533409e844b66133c
   YogaKit: f782866e155069a2cca2517aafea43200b01fd5a
 
-PODFILE CHECKSUM: 6a5add01998fe1c27d0bded885f8ea642e2cd078
+PODFILE CHECKSUM: e32509786d789fc20e2a0eba336c90fa23f7a057
 
 COCOAPODS: 1.12.0

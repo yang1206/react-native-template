@@ -1,3 +1,4 @@
+const { getDefaultConfig } = require('metro-config')
 const { getDefaultConfig: getDefaultExpoConfig } = require('@expo/metro-config')
 
 let metroConfig
@@ -34,6 +35,7 @@ else {
   const MetroSymlinksResolver = require('@rnx-kit/metro-resolver-symlinks')
 
   metroConfig = (async () => {
+    const defaultConfig = await getDefaultConfig()
     return makeMetroConfig({
       // watchFolders: [`${__dirname}/../..`], // for monorepos
       projectRoot: __dirname,
@@ -48,7 +50,7 @@ else {
           },
         }),
       },
-      // assetExts: [...defaultConfig.resolver.assetExts, 'bin'],
+      assetExts: [...defaultConfig.resolver.assetExts, 'bin'],
     })
   })()
 }
