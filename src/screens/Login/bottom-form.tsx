@@ -49,9 +49,10 @@ function BottomForm({ translateY }: BottomFormProps) {
     // 切换表单类型
     setFormType(formType === 'login' ? 'register' : 'login')
   }
-  function onSubmit(data: string) {
+  type Form = z.infer<typeof loginSchema>
+  function onSubmit(data: Form) {
     if (formType === 'login')
-      login(data)
+      login(data.password)
   }
   return (
     <View style={styles.formContainer}>
@@ -100,7 +101,7 @@ function BottomForm({ translateY }: BottomFormProps) {
         shape="square"
         label={formType === 'login' ? t('Login.login') : t('Login.register')}
         style={[styles.button, { backgroundColor: formType === 'login' ? '#6c63ff' : '#ff69b4' }]}
-        onPress={handleSubmit(data => onSubmit(JSON.stringify(data)))}
+        onPress={handleSubmit(data => onSubmit(data as Form))}
       >
       </Button>
 

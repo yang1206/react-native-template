@@ -5,6 +5,7 @@ import { SafeAreaProvider, initialWindowMetrics } from 'react-native-safe-area-c
 import { useFlipper } from '@react-navigation/devtools'
 import { navigationRef } from './helpers/navigationUtilities'
 import { useThemeStore } from '@/hooks'
+import { ErrorHandler } from '@/ui'
 
 export interface NavigationProps extends Partial<React.ComponentProps<typeof RNNavigationContainer>> { }
 
@@ -13,14 +14,16 @@ export function NavigationContainer(props: NavigationProps) {
   useFlipper(navigationRef)
   return (
     <SafeAreaProvider initialMetrics={initialWindowMetrics}>
-      <GestureHandlerRootView style={{ flex: 1 }}>
-        <RNNavigationContainer
-          {...props}
-          ref={navigationRef}
-          theme={colorScheme === 'dark' ? DarkTheme : DefaultTheme}
-        >{props.children}
-        </RNNavigationContainer>
-      </GestureHandlerRootView>
+      <ErrorHandler>
+        <GestureHandlerRootView style={{ flex: 1 }}>
+          <RNNavigationContainer
+            {...props}
+            ref={navigationRef}
+            theme={colorScheme === 'dark' ? DarkTheme : DefaultTheme}
+          >{props.children}
+          </RNNavigationContainer>
+        </GestureHandlerRootView>
+      </ErrorHandler>
     </SafeAreaProvider>
   )
 }

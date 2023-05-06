@@ -1,1 +1,1 @@
-export * from './modules/AuthStore'
+export * from './modules/auth-store'

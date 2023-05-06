@@ -61,6 +61,9 @@ dependencies:
   react:
     specifier: 18.2.0
     version: 18.2.0
+  react-error-boundary:
+    specifier: ^4.0.4
+    version: 4.0.4(react@18.2.0)
   react-hook-form:
     specifier: ^7.43.9
     version: 7.43.9(react@18.2.0)
@@ -237,6 +240,9 @@ devDependencies:
   pod-install:
     specifier: ^0.1.38
     version: 0.1.38
+  react-native-clean-project:
+    specifier: ^4.0.1
+    version: 4.0.1
   react-native-codegen:
     specifier: ^0.71.5
     version: 0.71.5(@babel/preset-env@7.21.5)
@@ -10097,6 +10103,15 @@ packages:
       - bufferutil
       - utf-8-validate
 
+  /react-error-boundary@4.0.4(react@18.2.0):
+    resolution: {integrity: sha512-AbqMFx8bCsob8rCHZvJYQ42MQijK0/034RUvan9qrqyJCpazr8d9vKHrysbxcr6odoHLZvQEcYomFPoIqH9fow==}
+    peerDependencies:
+      react: '>=16.13.1'
+    dependencies:
+      '@babel/runtime': 7.21.5
+      react: 18.2.0
+    dev: false
+
   /react-freeze@1.0.3(react@18.2.0):
     resolution: {integrity: sha512-ZnXwLQnGzrDpHBHiC56TXFXvmolPeMjTn1UOm610M4EXGzbEDR7oOIyS2ZiItgbs6eZc4oU/a0hpk8PrcKvv5g==}
     engines: {node: '>=10'}
@@ -10123,6 +10138,12 @@ packages:
 
   /react-is@18.2.0:
     resolution: {integrity: sha512-xWGDIW6x921xtzPkhiULtthJHoJvBbF3q26fzloPCK0hsvxtPVelvftw3zjbHWSkR2km9Z+4uxbDDK/6Zw9B8w==}
+
+  /react-native-clean-project@4.0.1:
+    resolution: {integrity: sha512-B7rXdFC4bfA+Vv7lZ9bKS6cUDgqg04OR5D69sNnhheFBJQ1V04cIfJ1Fu0sbqRsIehqlOcySQRpp8tm7r7PvLQ==}
+    engines: {node: '>=10.0.0'}
+    hasBin: true
+    dev: true
 
   /react-native-codegen@0.71.5(@babel/preset-env@7.21.5):
     resolution: {integrity: sha512-rfsuc0zkuUuMjFnrT55I1mDZ+pBRp2zAiRwxck3m6qeGJBGK5OV5JH66eDQ4aa+3m0of316CqrJDRzVlYufzIg==}

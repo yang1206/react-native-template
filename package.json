@@ -17,10 +17,11 @@
     "lint:eslint": "eslint --fix --ext .js,.ts,.tsx,./src",
     "lint:lint-staged": "lint-staged",
     "prepare": "husky install",
-    "expo:start": "expo start",
     "bundle:ios": "react-native bundle --entry-file index.js --platform ios --dev false --bundle-output ios/main.jsbundle --assets-dest ios",
     "bundle:android": "react-native bundle --platform android --dev false --entry-file index.js --bundle-output android/app/src/main/assets/index.android.bundle --assets-dest android/app/src/main/res",
-    "commit": "git pull && git add -A && git-cz && git push"
+    "commit": "git pull && git add -A && git-cz && git push",
+    "clean": "npx react-native-clean-project",
+    "clean-all": "npx react-native clean-project-auto"
   },
   "dependencies": {
     "@gorhom/bottom-sheet": "^4.4.6",
@@ -43,6 +44,7 @@
     "i18next": "^22.4.15",
     "nativewind": "^2.0.11",
     "react": "18.2.0",
+    "react-error-boundary": "^4.0.4",
     "react-hook-form": "^7.43.9",
     "react-native": "0.71.7",
     "react-native-device-info": "^10.6.0",
@@ -124,6 +126,7 @@
     "metro-react-native-babel-preset": "0.76.3",
     "metro-runtime": "^0.76.3",
     "pod-install": "^0.1.38",
+    "react-native-clean-project": "^4.0.1",
     "react-native-codegen": "^0.71.5",
     "react-native-flipper": "^0.190.0",
     "react-native-gradle-plugin": "^0.71.17",

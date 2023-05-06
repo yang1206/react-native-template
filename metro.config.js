@@ -50,7 +50,7 @@ else {
           },
         }),
       },
-      assetExts: [...defaultConfig.resolver.assetExts, 'bin'],
+      // assetExts: [...defaultConfig.resolver.assetExts, 'bin'],
     })
   })()
 }

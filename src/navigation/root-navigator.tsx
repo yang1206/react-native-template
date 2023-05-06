@@ -29,9 +29,9 @@ export function Root() {
     await SplashScreen.hideAsync()
   }, [])
   useEffect(() => {
-    if (isAuth)
-      hideSplash()
-  }, [hideSplash, isAuth])
+    // if (isAuth)
+    hideSplash()
+  }, [hideSplash])
   const isDark = colorScheme === 'dark'
   return (
     <Stack.Navigator
