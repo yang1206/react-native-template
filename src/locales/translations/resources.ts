@@ -1,6 +1,7 @@
 import en from './en'
-import zh from './zh'
+import zh from './zh-cn'
 
+export type Translations = typeof zh
 export const resources = {
   en: {
     translation: en,

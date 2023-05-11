@@ -1,4 +1,4 @@
-import type { Translations } from './zh'
+import type { Translations } from './zh-cn'
 
 const en: Translations = {
   common: {
@@ -60,5 +60,3 @@ const en: Translations = {
 }
 
 export default en
-
-export type { Translations }

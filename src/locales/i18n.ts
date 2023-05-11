@@ -1,7 +1,7 @@
 import i18n from 'i18next'
 import { I18nManager } from 'react-native'
 import { SupportedLanguage } from './constants'
-import type { Translations } from './translations/en'
+import type { Translations } from './translations/resources'
 import { resources } from './translations/resources'
 import { getLanguage } from './utils'
 
