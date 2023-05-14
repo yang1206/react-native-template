@@ -4,12 +4,11 @@ import type { AppStateStatus } from 'react-native'
 import { Platform } from 'react-native'
 import { focusManager } from '@tanstack/react-query'
 import FlashMessage from 'react-native-flash-message'
-import { useEffect } from 'react'
 import * as SplashScreen from 'expo-splash-screen'
+import { GestureHandlerRootView } from 'react-native-gesture-handler'
 import * as storage from './utils/storage'
 import { NAVIGATION_PERSISTENCE_KEY, useNavigationPersistence } from './navigation'
-import { useAppState, useOnlineManager, useThemeStore } from './hooks'
-import { getItem } from './utils/storage'
+import { loadSelectedTheme, useAppState, useOnlineManager } from './hooks'
 import { RootNavigator } from '@/navigation'
 import { APIProvider } from '@/api'
 import { hydrateAuth } from '@/store'
@@ -21,41 +20,33 @@ function onAppStateChange(status: AppStateStatus) {
 }
 
 hydrateAuth()
+loadSelectedTheme()
 SplashScreen.preventAutoHideAsync()
 
 function App() {
   useOnlineManager()
-
   useAppState(onAppStateChange)
   const {
     initialNavigationState,
     onNavigationStateChange,
     isRestored: isNavigationStateRestored,
   } = useNavigationPersistence(storage, NAVIGATION_PERSISTENCE_KEY)
-
-  const { setColorScheme } = useThemeStore()
-
-  useEffect(() => {
-    (async () => {
-      const storedColorScheme = getItem('appColorScheme')
-      if (storedColorScheme)
-        setColorScheme(storedColorScheme)
-    })()
-  }, [])
   return (
-    <BottomSheetModalProvider>
-      <APIProvider>
-        <RootNavigator
-          {...(__DEV__
-            ? {
-                initialState: initialNavigationState,
-                onStateChange: onNavigationStateChange,
-              }
-            : {})}
+    <GestureHandlerRootView style={{ flex: 1 }}>
+      <BottomSheetModalProvider>
+        <APIProvider>
+          <RootNavigator
+            {...(__DEV__
+              ? {
+                  initialState: initialNavigationState,
+                  onStateChange: onNavigationStateChange,
+                }
+              : {})}
           />
-        <FlashMessage position="top" />
-      </APIProvider>
-    </BottomSheetModalProvider>
+          <FlashMessage position="top" />
+        </APIProvider>
+      </BottomSheetModalProvider>
+    </GestureHandlerRootView>
 
   )
 }

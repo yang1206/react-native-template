@@ -5,7 +5,7 @@ import type { Language } from './translations/resources'
 import { preferredLocale } from './helpers/preferredLocale'
 import { getItem, setItem } from '@/utils'
 
-export const LOCAL = 'local'
+export const LOCAL = 'SELECTED_LANG'
 
 export function getLanguage(): Language {
   return getItem(LOCAL) || preferredLocale.languageCode

@@ -2,6 +2,7 @@ import type { BottomSheetModal } from '@gorhom/bottom-sheet'
 import React from 'react'
 import Ionicons from 'react-native-vector-icons/Ionicons'
 import { Item } from './item'
+import type { Theme } from '@/hooks'
 import { useThemeStore } from '@/hooks'
 import { t } from '@/locales'
 import type { IOption } from '@/ui'
@@ -9,13 +10,13 @@ import type { IOption } from '@/ui'
 import { Options } from '@/ui'
 
 export function ThemeItem() {
-  const { colorScheme, setColorScheme } = useThemeStore()
+  const { colorScheme, selectedTheme, setColorScheme } = useThemeStore()
 
   const optionsRef = React.useRef<BottomSheetModal>(null)
   const open = React.useCallback(() => optionsRef.current?.present(), [])
   const onSelect = React.useCallback(
     (option: IOption) => {
-      setColorScheme(option.value as 'light' | 'dark')
+      setColorScheme(option.value as Theme)
       optionsRef.current?.dismiss()
     },
     [setColorScheme],
@@ -30,21 +31,21 @@ export function ThemeItem() {
     [],
   )
 
-  const selectedTheme = React.useMemo(
-    () => themes.find(theme => theme.value === colorScheme),
-    [colorScheme, themes],
+  const theme = React.useMemo(
+    () => themes.find(theme => theme.value === selectedTheme),
+    [selectedTheme, themes],
   )
 
   return (
     <>
       <Item
         icon={<Ionicons name={'cloudy-night-outline'} size={20} color={'#22d'}></Ionicons>}
-      text="UserScreen.theme" value={selectedTheme?.label} onPress={open} />
+        text="UserScreen.theme" value={theme?.label} onPress={open} />
       <Options
         ref={optionsRef}
         options={themes}
         onSelect={onSelect}
-        value={selectedTheme?.value}
+        value={theme?.value}
       />
     </>
   )
