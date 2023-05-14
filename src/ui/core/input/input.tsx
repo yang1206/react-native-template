@@ -1,4 +1,4 @@
-import { styled } from 'nativewind'
+import { styled, useColorScheme } from 'nativewind'
 import * as React from 'react'
 import type { TextInput, TextInputProps } from 'react-native'
 import { TextInput as NTextInput, StyleSheet } from 'react-native'
@@ -18,7 +18,8 @@ export interface NInputProps extends TextInputProps {
 
 export const Input = React.forwardRef<TextInput, NInputProps>((props, ref) => {
   const { label, error, ...inputProps } = props
-
+  const { colorScheme } = useColorScheme()
+  const isDark = colorScheme === 'dark'
   const [isFocussed, setIsFocussed] = React.useState(false)
   const onBlur = React.useCallback(() => setIsFocussed(false), [])
   const onFocus = React.useCallback(() => setIsFocussed(true), [])
@@ -26,15 +27,29 @@ export const Input = React.forwardRef<TextInput, NInputProps>((props, ref) => {
   const borderColor = error
     ? 'border-danger-600'
     : isFocussed
-      ? 'border-[#6c63ff]'
-      : 'border-neutral-400'
+      ? isDark
+        ? 'border-white'
+        : 'border-neutral-600'
+      : isDark
+        ? 'border-charcoal-700'
+        : 'border-neutral-400'
 
-  const bgColor = error ? 'bg-danger-50' : 'bg-neutral-200'
+  const bgColor = isDark
+    ? 'bg-charcoal-800'
+    : error
+      ? 'bg-danger-50'
+      : 'bg-neutral-200'
   const textDirection = isRTL ? 'text-right' : 'text-left'
   return (
     <View className="mb-4">
       {label && (
-        <Text variant="md" className={error ? 'text-danger-600' : 'text-black'}>
+        <Text variant="md" className={
+          error
+            ? 'text-danger-600'
+            : isDark
+              ? 'text-charcoal-100'
+              : 'text-black'
+          }>
           {label}
         </Text>
       )}
@@ -42,7 +57,7 @@ export const Input = React.forwardRef<TextInput, NInputProps>((props, ref) => {
         testID="STextInput"
         ref={ref}
         placeholderTextColor={colors.neutral[400]}
-        className={`mt-0 border-[1px] py-3 px-2  ${borderColor} rounded-md ${bgColor} text-[16px] ${textDirection}`}
+        className={`mt-0 border-[1px] py-4 px-2  ${borderColor} rounded-md ${bgColor} text-[16px] ${textDirection} dark:text-charcoal-100`}
         onBlur={onBlur}
         onFocus={onFocus}
         {...inputProps}

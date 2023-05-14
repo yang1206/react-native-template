@@ -10,7 +10,7 @@ import Animated, {
 import type { ViewStyle } from 'react-native'
 import { Dimensions, View } from 'react-native'
 import FastImage from 'react-native-fast-image'
-import PaginationItem from './PaginationItem'
+import PaginationItem from './pagination-item'
 
 const { width: PAGE_WIDTH } = Dimensions.get('window')
 export type TAnimationStyle = (value: number) => AnimatedStyleProp<ViewStyle>

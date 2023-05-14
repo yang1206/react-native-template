@@ -1,13 +1,15 @@
 import React from 'react'
+import { Cover } from './cover'
 import { useIsFirstTime } from '@/hooks'
-import { Button, Image, SafeAreaView, Text, View } from '@/ui'
+import { Button, SafeAreaView, Text, View } from '@/ui'
 
 export function Onboarding() {
   const [_, setIsFirstTime] = useIsFirstTime()
   return (
     <View className="flex h-full items-center pt-20  justify-center bg-white text-gray-600">
-       {/* eslint-disable-next-line   @typescript-eslint/no-require-imports */}
-      <Image className="w-full flex-1" source={require('./cover.png')} />
+      <View className="w-full flex-1">
+        <Cover />
+      </View>
 
       <View className="justify-end ">
         <Text className="my-3 text-center text-5xl font-bold text-gray-600">

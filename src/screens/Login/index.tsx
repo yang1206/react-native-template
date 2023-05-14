@@ -1,20 +1,17 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useMemo } from 'react'
 import { Dimensions, StyleSheet } from 'react-native'
 import Animated, {
-  useAnimatedGestureHandler,
   useAnimatedStyle,
   useSharedValue,
   withSpring,
   withTiming,
 } from 'react-native-reanimated'
 import { LinearGradient } from 'expo-linear-gradient'
-import type { PanGestureHandlerGestureEvent } from 'react-native-gesture-handler'
-import { PanGestureHandler } from 'react-native-gesture-handler'
+import { Gesture, GestureDetector } from 'react-native-gesture-handler'
 import { BlurView } from '@react-native-community/blur'
 import TopSection from './top-section'
 import BottomForm from './bottom-form'
-import { SafeAreaView, StatusBar, View } from '@/ui'
-import { useThemeStore } from '@/hooks'
+import { SafeAreaView, View } from '@/ui'
 
 // 适应不同屏幕高度
 function BottomUpAnimation() {
@@ -25,22 +22,21 @@ function BottomUpAnimation() {
     translateY.value = withTiming(0, { duration: 1000 })
   }, [translateY])
   // 定义手势事件处理函数
-  const gestureHandler = useAnimatedGestureHandler<
-    PanGestureHandlerGestureEvent,
-    { startY: number }
-  >({
-    onStart: (_, ctx) => {
-      ctx.startY = translateY.value
-    },
-    onActive: (event, ctx) => {
-      translateY.value = ctx.startY + event.translationY
-      scale.value = event.translationY > 0 ? 1 - event.translationY / 1000 : 1
-    },
-    onEnd: () => {
-      translateY.value = withSpring(0)
-      scale.value = withSpring(1)
-    },
-  })
+
+  const panGesture = useMemo(() => (
+    Gesture.Pan()
+      .minDistance(20)
+      .onChange((e) => {
+        'worklet'
+        translateY.value = e.translationY
+        scale.value = e.translationY > 0 ? 1 - e.translationY / 1000 : 1
+      })
+      .onEnd(() => {
+        'worklet'
+        translateY.value = withSpring(0)
+        scale.value = withSpring(1)
+      })
+  ), [translateY, scale])
 
   // 定义动画样式
   const animatedStyle = useAnimatedStyle(() => {
@@ -54,13 +50,10 @@ function BottomUpAnimation() {
     }
   })
 
-  const { isDark } = useThemeStore()
-
   return (
     <>
       <SafeAreaView style={[styles.safeArea, { backgroundColor: 'transparent' }]} >
         <LinearGradient colors={['#4c669f', '#3b5998', '#192f6a']} style={styles.gradient}>
-          <StatusBar isDarkStyle={!isDark} />
           <View style={styles.contentWrapper}>
             <BlurView style={styles.blur} blurAmount={25}
               blurType="light"
@@ -71,16 +64,15 @@ function BottomUpAnimation() {
             {/* 底部滑动表单 */}
             <View style={styles.bottom}>
 
-              <PanGestureHandler
-                onGestureEvent={gestureHandler}
-                minDist={20}
-                hitSlop={{ top: 20, bottom: 20, left: 20, right: 20 }}
-              >
+              <GestureDetector
+                gesture={panGesture}
+                >
                 <Animated.View style={[styles.animatedView, animatedStyle]}>
                   <View style={styles.card} className="bg-white dark:bg-black" />
                   <BottomForm translateY={translateY} />
                 </Animated.View>
-              </PanGestureHandler>
+              </GestureDetector>
+
             </View>
           </View>
         </LinearGradient>

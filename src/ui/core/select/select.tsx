@@ -1,12 +1,13 @@
 import type { BottomSheetModal } from '@gorhom/bottom-sheet'
 import * as React from 'react'
-
 import Ionicons from 'react-native-vector-icons/Ionicons'
 import { Text } from '../text'
 import { TouchableOpacity } from '../touchable-opacity'
 import { View } from '../view'
 import type { IOption } from './options'
 import { Options } from './options'
+import { useThemeStore } from '@/hooks'
+import { colors } from '@/ui/theme'
 
 export interface SelectProps {
   value?: string | number
@@ -31,7 +32,8 @@ export function Select(props: SelectProps) {
   const optionsRef = React.useRef<BottomSheetModal>(null)
   const open = React.useCallback(() => optionsRef.current?.present(), [])
   const close = React.useCallback(() => optionsRef.current?.dismiss(), [])
-
+  const { colorScheme } = useThemeStore()
+  const isDark = colorScheme === 'dark'
   const onSelectOption = React.useCallback(
     (option: IOption) => {
       onSelect?.(option.value)
@@ -40,10 +42,17 @@ export function Select(props: SelectProps) {
     [close, onSelect],
   )
 
-  const borderColor = error ? 'border-danger-600' : 'border-neutral-400'
+  const borderColor = error
+    ? 'border-danger-600'
+    : isDark
+      ? 'border-charcoal-700'
+      : 'border-neutral-400'
 
-  const bgColor = error ? 'bg-danger-50' : 'bg-neutral-200'
-
+  const bgColor = isDark
+    ? 'bg-charcoal-800'
+    : error
+      ? 'bg-danger-50'
+      : 'bg-neutral-200'
   const textValue
     = value !== undefined
       ? options?.filter(t => t.value === value)?.[0]?.label ?? placeholder
@@ -54,7 +63,13 @@ export function Select(props: SelectProps) {
         {label && (
           <Text
             variant="md"
-            className={error ? 'text-danger-600' : 'text-black'}
+            className={
+              error
+                ? 'text-danger-600'
+                : isDark
+                  ? 'text-charcoal-100'
+                  : 'text-black'
+            }
           >
             {label}
           </Text>
@@ -65,11 +80,17 @@ export function Select(props: SelectProps) {
           onPress={open}
         >
           <View className="flex-1">
-            <Text variant="md" className="text-neutral-600">
+            <Text variant="md" className={
+              error
+                ? 'text-danger-600'
+                : isDark
+                  ? 'text-charcoal-100'
+                  : 'text-neutral-600'
+            }>
               {textValue}
             </Text>
           </View>
-          <Ionicons name="chevron-down-outline" size={24} />
+          <Ionicons color={isDark ? colors.white : colors.black} name="chevron-down-outline" size={24} />
         </TouchableOpacity>
         {error && <Text variant="error">{error}</Text>}
       </View>

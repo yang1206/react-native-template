@@ -5,8 +5,8 @@ import type { ComponentType } from 'react'
 import * as React from 'react'
 import Ionicons from 'react-native-vector-icons/Ionicons'
 import type { IconProps } from 'react-native-vector-icons/Icon'
-import { useNavigation } from '@react-navigation/native'
 import { FeedNavigator } from './feed-navigator'
+import { useThemeStore } from '@/hooks'
 import { HomeScreen, UserScreen } from '@/screens'
 import { colors } from '@/ui'
 import { t } from '@/locales'
@@ -77,13 +77,13 @@ function BarIcon({ color, name, size, ...reset }: BarIconType) {
   return <Icon color={color} size={size} {...reset} />
 }
 export function TabNavigator() {
-  const { navigate } = useNavigation()
+  const { colorScheme } = useThemeStore()
   return (
     <Tab.Navigator
       screenOptions={({ route }) => ({
         tabBarIcon: ({ color }) => <BarIcon name={route.name} size={30} color={color} />,
         tabBarActiveTintColor: colors.primary[400],
-        tabBarInactiveTintColor: colors.neutral[600],
+        tabBarInactiveTintColor: colorScheme === 'dark' ? colors.charcoal[400] : colors.neutral[400],
       })}
     >
       <Tab.Group

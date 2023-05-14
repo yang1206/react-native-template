@@ -8,7 +8,7 @@ import type { RouteProp } from '@/navigation'
 export function Post() {
   const { params } = useRoute<RouteProp<'Post'>>()
   const { data, isLoading, isError } = usePost({
-    variables: { id: params.id },
+    variables: { id: params?.id },
   })
 
   if (isLoading) {

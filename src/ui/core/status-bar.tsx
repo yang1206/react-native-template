@@ -1,17 +1,18 @@
-import { StatusBar as NStatusBar } from 'react-native'
+import type { StatusBarProps } from 'react-native'
+import { StatusBar as NStatusBar, View } from 'react-native'
 import React from 'react'
 import { styled } from 'nativewind'
-import { View } from '@/ui'
 
-function StatusBarComp(props: { isDarkStyle: boolean; statusBarBgColor?: string }) {
-  const { isDarkStyle = true, statusBarBgColor = 'transparent' } = props
+type Props = { isDarkStyle?: boolean } & StatusBarProps
+function StatusBarComp(props: Props) {
+  const { isDarkStyle = true, backgroundColor = 'transparent' } = props
   const STATUS_BAR_HEIGHT = 0
   return (
-    <View style={{ height: STATUS_BAR_HEIGHT, backgroundColor: statusBarBgColor }}>
+    <View style={{ height: STATUS_BAR_HEIGHT, backgroundColor }}>
       <NStatusBar
         translucent={true}
-        backgroundColor="transparent"
-        barStyle={isDarkStyle ? 'dark-content' : 'light-content'}
+        backgroundColor={backgroundColor}
+        barStyle={isDarkStyle ? 'light-content' : 'dark-content'}
       />
     </View>
   )
