@@ -10,6 +10,9 @@ dependencies:
   '@react-native-community/blur':
     specifier: ^4.3.1
     version: 4.3.1(react-native@0.71.8)(react@18.2.0)
+  '@react-native-community/hooks':
+    specifier: ^3.0.0
+    version: 3.0.0(react-native@0.71.8)(react@18.2.0)
   '@react-native-community/netinfo':
     specifier: ^9.3.7
     version: 9.3.7(react-native@0.71.8)
@@ -29,8 +32,8 @@ dependencies:
     specifier: ^1.4.3
     version: 1.4.3(@babel/runtime@7.21.5)(react-native@0.71.8)(react@18.2.0)
   '@tanstack/react-query':
-    specifier: ^4.29.5
-    version: 4.29.5(react-native@0.71.8)(react@18.2.0)
+    specifier: ^4.29.7
+    version: 4.29.7(react-native@0.71.8)(react@18.2.0)
   axios:
     specifier: ^1.4.0
     version: 1.4.0
@@ -38,20 +41,20 @@ dependencies:
     specifier: ^2.30.0
     version: 2.30.0
   expo:
-    specifier: ^48.0.16
-    version: 48.0.16(@babel/core@7.21.8)
+    specifier: ^48.0.17
+    version: 48.0.17(@babel/core@7.21.8)
   expo-constants:
     specifier: ^14.2.1
-    version: 14.2.1(expo@48.0.16)
+    version: 14.2.1(expo@48.0.17)
   expo-linear-gradient:
     specifier: ^12.1.2
-    version: 12.1.2(expo@48.0.16)
+    version: 12.1.2(expo@48.0.17)
   expo-modules-core:
     specifier: ^1.2.7
     version: 1.2.7
   expo-splash-screen:
     specifier: ^0.18.2
-    version: 0.18.2(expo-modules-autolinking@1.2.0)(expo@48.0.16)
+    version: 0.18.2(expo-modules-autolinking@1.2.0)(expo@48.0.17)
   i18next:
     specifier: ^22.4.15
     version: 22.4.15
@@ -111,7 +114,7 @@ dependencies:
     version: 9.2.0
   react-query-kit:
     specifier: ^1.4.4
-    version: 1.4.4(@tanstack/react-query@4.29.5)
+    version: 1.4.4(@tanstack/react-query@4.29.7)
   zod:
     specifier: ^3.21.4
     version: 3.21.4
@@ -121,8 +124,8 @@ dependencies:
 
 devDependencies:
   '@antfu/eslint-config-react':
-    specifier: ^0.38.5
-    version: 0.38.5(eslint@8.39.0)(jest@29.5.0)(typescript@4.9.5)
+    specifier: ^0.38.6
+    version: 0.38.6(eslint@8.39.0)(jest@29.5.0)(typescript@4.9.5)
   '@babel/core':
     specifier: ^7.21.8
     version: 7.21.8
@@ -287,13 +290,13 @@ packages:
       '@jridgewell/gen-mapping': 0.3.3
       '@jridgewell/trace-mapping': 0.3.18
 
-  /@antfu/eslint-config-basic@0.38.5(@typescript-eslint/eslint-plugin@5.59.2)(@typescript-eslint/parser@5.59.2)(eslint@8.39.0)(typescript@4.9.5):
-    resolution: {integrity: sha512-Xifabjs94QscgQoLgZbj87GsagvtzZBoEY1+efHsz6RZE8kHqHzxZr9ulEZ/3e563Ld8fDGbgCTAxkDhrhkOjA==}
+  /@antfu/eslint-config-basic@0.38.6(@typescript-eslint/eslint-plugin@5.59.2)(@typescript-eslint/parser@5.59.2)(eslint@8.39.0)(typescript@4.9.5):
+    resolution: {integrity: sha512-g5hxtS98MsQ6plCQ1rPx/K9+7ZZmUgdsWx84PJCwbaSuSklP1jZjuhMcjOPn/LW5t9QAPeb74T9+QsK3+IyNKQ==}
     peerDependencies:
       eslint: '>=7.4.0'
     dependencies:
       eslint: 8.39.0
-      eslint-plugin-antfu: 0.38.5(eslint@8.39.0)(typescript@4.9.5)
+      eslint-plugin-antfu: 0.38.6(eslint@8.39.0)(typescript@4.9.5)
       eslint-plugin-eslint-comments: 3.2.0(eslint@8.39.0)
       eslint-plugin-html: 7.1.0
       eslint-plugin-import: 2.27.5(@typescript-eslint/parser@5.59.2)(eslint@8.39.0)
@@ -316,12 +319,12 @@ packages:
       - typescript
     dev: true
 
-  /@antfu/eslint-config-react@0.38.5(eslint@8.39.0)(jest@29.5.0)(typescript@4.9.5):
-    resolution: {integrity: sha512-CKK3TvMpYg8qSni4w0Km86kun//PMxzcwg6uoJf6igBqXA9ocg4aBRaXaGbOMWcjNvFtUAFpG0be1uQuqLMeIg==}
+  /@antfu/eslint-config-react@0.38.6(eslint@8.39.0)(jest@29.5.0)(typescript@4.9.5):
+    resolution: {integrity: sha512-zNfIX/joGAk00K0r8awyIUBhpJGm0lqO8Nwr8ma0ncq4WFVAKz5RJixo7o28Ku7S6GmFpesi5rwscxnIjMRmfA==}
     peerDependencies:
       eslint: '>=7.4.0'
     dependencies:
-      '@antfu/eslint-config-ts': 0.38.5(eslint@8.39.0)(jest@29.5.0)(typescript@4.9.5)
+      '@antfu/eslint-config-ts': 0.38.6(eslint@8.39.0)(jest@29.5.0)(typescript@4.9.5)
       eslint: 8.39.0
       eslint-plugin-react: 7.32.2(eslint@8.39.0)
       eslint-plugin-react-hooks: 4.6.0(eslint@8.39.0)
@@ -333,13 +336,13 @@ packages:
       - typescript
     dev: true
 
-  /@antfu/eslint-config-ts@0.38.5(eslint@8.39.0)(jest@29.5.0)(typescript@4.9.5):
-    resolution: {integrity: sha512-5NCZj44HgWNLvp5ikah26f7RnovhSgrNzfO3zSMewhaJZgDerglVpig3Rc0tOZFEGieWZTDWruZHyvZZRc3lJw==}
+  /@antfu/eslint-config-ts@0.38.6(eslint@8.39.0)(jest@29.5.0)(typescript@4.9.5):
+    resolution: {integrity: sha512-a7PY1xpJwjZwIciu8gboLJ2yYxB1HMCKKshuKvH8vcGv+af5X9wk0eLN3Paa72yytSZZ2fqxfD0AwXTW0n+oiA==}
     peerDependencies:
       eslint: '>=7.4.0'
       typescript: '>=3.9'
     dependencies:
-      '@antfu/eslint-config-basic': 0.38.5(@typescript-eslint/eslint-plugin@5.59.2)(@typescript-eslint/parser@5.59.2)(eslint@8.39.0)(typescript@4.9.5)
+      '@antfu/eslint-config-basic': 0.38.6(@typescript-eslint/eslint-plugin@5.59.2)(@typescript-eslint/parser@5.59.2)(eslint@8.39.0)(typescript@4.9.5)
       '@typescript-eslint/eslint-plugin': 5.59.2(@typescript-eslint/parser@5.59.2)(eslint@8.39.0)(typescript@4.9.5)
       '@typescript-eslint/parser': 5.59.2(eslint@8.39.0)(typescript@4.9.5)
       eslint: 8.39.0
@@ -1963,6 +1966,28 @@ packages:
     transitivePeerDependencies:
       - supports-color
 
+  /@expo/config-plugins@6.0.2:
+    resolution: {integrity: sha512-Cn01fXMHwjU042EgO9oO3Mna0o/UCrW91MQLMbJa4pXM41CYGjNgVy1EVXiuRRx/upegHhvltBw5D+JaUm8aZQ==}
+    dependencies:
+      '@expo/config-types': 48.0.0
+      '@expo/json-file': 8.2.37
+      '@expo/plist': 0.0.20
+      '@expo/sdk-runtime-versions': 1.0.0
+      '@react-native/normalize-color': 2.1.0
+      chalk: 4.1.2
+      debug: 4.3.4
+      find-up: 5.0.0
+      getenv: 1.0.0
+      glob: 7.1.6
+      resolve-from: 5.0.0
+      semver: 7.5.0
+      slash: 3.0.0
+      xcode: 3.0.1
+      xml2js: 0.4.23
+    transitivePeerDependencies:
+      - supports-color
+    dev: false
+
   /@expo/config-types@48.0.0:
     resolution: {integrity: sha512-DwyV4jTy/+cLzXGAo1xftS6mVlSiLIWZjl9DjTCLPFVgNYQxnh7htPilRv4rBhiNs7KaznWqKU70+4zQoKVT9A==}
 
@@ -2812,6 +2837,16 @@ packages:
     resolution: {integrity: sha512-+zDZ20NUnSWghj7Ku5aFphMzuM9JulqCW+aPXT6IfIXFbb8tzYTTOSeRFOtuekJ99ibW2fUCSsjuKNlwDIbHFg==}
     dev: true
 
+  /@react-native-community/hooks@3.0.0(react-native@0.71.8)(react@18.2.0):
+    resolution: {integrity: sha512-g2OyxXHfwIytXUJitBR6Z/ISoOfp0WKx5FOv+NqJ/CrWjRDcTw6zXE5I1C9axfuh30kJqzWchVfCDrkzZYTxqg==}
+    peerDependencies:
+      react: '>=17.0.2'
+      react-native: '>=0.65'
+    dependencies:
+      react: 18.2.0
+      react-native: 0.71.8(@babel/core@7.21.8)(@babel/preset-env@7.21.5)(react@18.2.0)
+    dev: false
+
   /@react-native-community/netinfo@9.3.7(react-native@0.71.8):
     resolution: {integrity: sha512-+taWmE5WpBp0uS6kf+bouCx/sn89G9EpR4s2M/ReLvctVIFL2Qh8WnWfBxqK9qwgmFha/uqjSr2Gq03OOtiDcw==}
     peerDependencies:
@@ -3083,12 +3118,12 @@ packages:
     dependencies:
       '@sinonjs/commons': 2.0.0
 
-  /@tanstack/query-core@4.29.5:
-    resolution: {integrity: sha512-xXIiyQ/4r9KfaJ3k6kejqcaqFXXBTzN2aOJ5H1J6aTJE9hl/nbgAdfF6oiIu0CD5xowejJEJ6bBg8TO7BN4NuQ==}
+  /@tanstack/query-core@4.29.7:
+    resolution: {integrity: sha512-GXG4b5hV2Loir+h2G+RXhJdoZhJLnrBWsuLB2r0qBRyhWuXq9w/dWxzvpP89H0UARlH6Mr9DiVj4SMtpkF/aUA==}
     dev: false
 
-  /@tanstack/react-query@4.29.5(react-native@0.71.8)(react@18.2.0):
-    resolution: {integrity: sha512-F87cibC3s3eG0Q90g2O+hqntpCrudKFnR8P24qkH9uccEhXErnJxBC/AAI4cJRV2bfMO8IeGZQYf3WyYgmSg0w==}
+  /@tanstack/react-query@4.29.7(react-native@0.71.8)(react@18.2.0):
+    resolution: {integrity: sha512-ijBWEzAIo09fB1yd22slRZzprrZ5zMdWYzBnCg5qiXuFbH78uGN1qtGz8+Ed4MuhaPaYSD+hykn+QEKtQviEtg==}
     peerDependencies:
       react: ^16.8.0 || ^17.0.0 || ^18.0.0
       react-dom: ^16.8.0 || ^17.0.0 || ^18.0.0
@@ -3099,7 +3134,7 @@ packages:
       react-native:
         optional: true
     dependencies:
-      '@tanstack/query-core': 4.29.5
+      '@tanstack/query-core': 4.29.7
       react: 18.2.0
       react-native: 0.71.8(@babel/core@7.21.8)(@babel/preset-env@7.21.5)(react@18.2.0)
       use-sync-external-store: 1.2.0(react@18.2.0)
@@ -5363,8 +5398,8 @@ packages:
       - supports-color
     dev: true
 
-  /eslint-plugin-antfu@0.38.5(eslint@8.39.0)(typescript@4.9.5):
-    resolution: {integrity: sha512-uBLSmOMhMLuioEm92Y7k4igNXBXcCrskzQYZKhzjoj+2GBo/hanKjCIHf2oDmydnCx6KCFARnQ+mnNanM0/qig==}
+  /eslint-plugin-antfu@0.38.6(eslint@8.39.0)(typescript@4.9.5):
+    resolution: {integrity: sha512-oQImiNKe+iGwoznuydq70s6oJHpaUE/hCHFeu4v7oy/hfAw7oBuCNi6TCZtQ/MUr+4XyQwq9sdC3fsLZC+DF1g==}
     dependencies:
       '@typescript-eslint/utils': 5.59.5(eslint@8.39.0)(typescript@4.9.5)
     transitivePeerDependencies:
@@ -5861,20 +5896,20 @@ packages:
       jest-util: 29.5.0
     dev: true
 
-  /expo-application@5.1.1(expo@48.0.16):
+  /expo-application@5.1.1(expo@48.0.17):
     resolution: {integrity: sha512-aDatTcTTCdTbHw8h4/Tq2ilc6InM5ntF9xWCJdOcnUEcglxxGphVI/lzJKBaBF6mJECA8mEOjpVg2EGxOctTwg==}
     peerDependencies:
       expo: '*'
     dependencies:
-      expo: 48.0.16(@babel/core@7.21.8)
+      expo: 48.0.17(@babel/core@7.21.8)
     dev: false
 
-  /expo-asset@8.9.1(expo@48.0.16):
+  /expo-asset@8.9.1(expo@48.0.17):
     resolution: {integrity: sha512-ugavxA7Scn96TBdeTYQA6xtHktnk0o/0xk7nFkxJKoH/t2cZDFSB05X0BI2/LDZY4iE6xTPOYw4C4mmourWfuA==}
     dependencies:
       blueimp-md5: 2.19.0
-      expo-constants: 14.2.1(expo@48.0.16)
-      expo-file-system: 15.2.2(expo@48.0.16)
+      expo-constants: 14.2.1(expo@48.0.17)
+      expo-file-system: 15.2.2(expo@48.0.17)
       invariant: 2.2.4
       md5-file: 3.2.3
       path-browserify: 1.0.1
@@ -5884,50 +5919,50 @@ packages:
       - supports-color
     dev: false
 
-  /expo-constants@14.2.1(expo@48.0.16):
+  /expo-constants@14.2.1(expo@48.0.17):
     resolution: {integrity: sha512-DD5u4QmBds2U7uYo409apV7nX+XjudARcgqe7S9aRFJ/6kyftmuxvk1DpaU4X42Av8z/tfKwEpuxl+vl7HHx/Q==}
     peerDependencies:
       expo: '*'
     dependencies:
       '@expo/config': 8.0.2
-      expo: 48.0.16(@babel/core@7.21.8)
+      expo: 48.0.17(@babel/core@7.21.8)
       uuid: 3.4.0
     transitivePeerDependencies:
       - supports-color
     dev: false
 
-  /expo-file-system@15.2.2(expo@48.0.16):
+  /expo-file-system@15.2.2(expo@48.0.17):
     resolution: {integrity: sha512-LFkOLcWwlmnjkURxZ3/0ukS35OswX8iuQknLHRHeyk8mUA8fpRPPelD/a1lS+yclqfqavMJmTXVKM1Nsq5XVMA==}
     peerDependencies:
       expo: '*'
     dependencies:
-      expo: 48.0.16(@babel/core@7.21.8)
+      expo: 48.0.17(@babel/core@7.21.8)
       uuid: 3.4.0
     dev: false
 
-  /expo-font@11.1.1(expo@48.0.16):
+  /expo-font@11.1.1(expo@48.0.17):
     resolution: {integrity: sha512-X+aICqYY69hiiDDtcNrjq8KutHrH2TrHuMqk0Rfq0P7hF6hMd+YefwLBNkvIrqrgmTAuqiLjMUwj2rHLqmgluw==}
     peerDependencies:
       expo: '*'
     dependencies:
-      expo: 48.0.16(@babel/core@7.21.8)
+      expo: 48.0.17(@babel/core@7.21.8)
       fontfaceobserver: 2.3.0
     dev: false
 
-  /expo-keep-awake@12.0.1(expo@48.0.16):
+  /expo-keep-awake@12.0.1(expo@48.0.17):
     resolution: {integrity: sha512-hqeCnb4033TyuZaXs93zTK7rjVJ3bywXATyMmKmKkLEsH2PKBAl/VmjlCOPQL/2Ncqz6aj7Wo//tjeJTARBD4g==}
     peerDependencies:
       expo: '*'
     dependencies:
-      expo: 48.0.16(@babel/core@7.21.8)
+      expo: 48.0.17(@babel/core@7.21.8)
     dev: false
 
-  /expo-linear-gradient@12.1.2(expo@48.0.16):
+  /expo-linear-gradient@12.1.2(expo@48.0.17):
     resolution: {integrity: sha512-e1d6Hq5qsRL8sWutrOuQhuir4vHiRJ1PmvDIL8P33mt51Y8VFTQjTG/mr5qJlT8lUD/ADJfaBLzV7SNqSuDTLQ==}
     peerDependencies:
       expo: '*'
     dependencies:
-      expo: 48.0.16(@babel/core@7.21.8)
+      expo: 48.0.17(@babel/core@7.21.8)
     dev: false
 
   /expo-modules-autolinking@1.2.0:
@@ -5947,37 +5982,37 @@ packages:
       invariant: 2.2.4
     dev: false
 
-  /expo-splash-screen@0.18.2(expo-modules-autolinking@1.2.0)(expo@48.0.16):
+  /expo-splash-screen@0.18.2(expo-modules-autolinking@1.2.0)(expo@48.0.17):
     resolution: {integrity: sha512-fsiKmyn/lbJtV6Uor6wSvl21fScOidFzmB/HHShQJJOu2TBN/vqMvhPu/r0bF5NVk8Wi64r98hiWY1EEsbW03w==}
     peerDependencies:
       expo: '*'
     dependencies:
       '@expo/configure-splash-screen': 0.6.0
       '@expo/prebuild-config': 6.0.1(expo-modules-autolinking@1.2.0)
-      expo: 48.0.16(@babel/core@7.21.8)
+      expo: 48.0.17(@babel/core@7.21.8)
     transitivePeerDependencies:
       - encoding
       - expo-modules-autolinking
       - supports-color
     dev: false
 
-  /expo@48.0.16(@babel/core@7.21.8):
-    resolution: {integrity: sha512-3LOfO80FZn+K3NngaP80LC2KE4rQcuzF3hQB6k8877A3Y/UPF5jmr8H7jlRrfvWSaYlenwzHhMs6Lyhr3zwfGw==}
+  /expo@48.0.17(@babel/core@7.21.8):
+    resolution: {integrity: sha512-5T1CsMUlfI+xFB89GOU+/xtSSbSBBFVTqwgheAU0cQolfbs+YyJCMTKU5vN45N5OK+ym7p/LKPa6DQAxYPF8YQ==}
     hasBin: true
     dependencies:
       '@babel/runtime': 7.21.5
       '@expo/cli': 0.7.1(expo-modules-autolinking@1.2.0)
       '@expo/config': 8.0.2
-      '@expo/config-plugins': 6.0.1
+      '@expo/config-plugins': 6.0.2
       '@expo/vector-icons': 13.0.0
       babel-preset-expo: 9.3.2(@babel/core@7.21.8)
       cross-spawn: 6.0.5
-      expo-application: 5.1.1(expo@48.0.16)
-      expo-asset: 8.9.1(expo@48.0.16)
-      expo-constants: 14.2.1(expo@48.0.16)
-      expo-file-system: 15.2.2(expo@48.0.16)
-      expo-font: 11.1.1(expo@48.0.16)
-      expo-keep-awake: 12.0.1(expo@48.0.16)
+      expo-application: 5.1.1(expo@48.0.17)
+      expo-asset: 8.9.1(expo@48.0.17)
+      expo-constants: 14.2.1(expo@48.0.17)
+      expo-file-system: 15.2.2(expo@48.0.17)
+      expo-font: 11.1.1(expo@48.0.17)
+      expo-keep-awake: 12.0.1(expo@48.0.17)
       expo-modules-autolinking: 1.2.0
       expo-modules-core: 1.2.7
       fbemitter: 3.0.0
@@ -10293,7 +10328,7 @@ packages:
       - supports-color
       - utf-8-validate
 
-  /react-query-kit@1.4.4(@tanstack/react-query@4.29.5):
+  /react-query-kit@1.4.4(@tanstack/react-query@4.29.7):
     resolution: {integrity: sha512-GSEweuufpjqPSZMPxtetLTPSE4AgQsWoEspX4L0aVVCOzf6D2yoVJydlZLWw25tHAzbjF2BstOya6saYIiEYxA==}
     peerDependencies:
       '@tanstack/react-query': '*'
@@ -10301,7 +10336,7 @@ packages:
       '@tanstack/react-query':
         optional: true
     dependencies:
-      '@tanstack/react-query': 4.29.5(react-native@0.71.8)(react@18.2.0)
+      '@tanstack/react-query': 4.29.7(react-native@0.71.8)(react@18.2.0)
     dev: false
 
   /react-query-native-devtools@4.0.0(react-native-flipper@0.190.0)(react-query@3.39.3):
