@@ -1,8 +1,8 @@
-import HomeScreen from './home'
+import HomeScreen from './Home'
 import AboutScreen from './About'
-import UserScreen from './user'
-import LoginScreen from './login'
-import { AddPost, Feed, Post } from './feed'
+import UserScreen from './User'
+import LoginScreen from './Login'
+import { AddPost, Feed, Post } from './Feed'
 
 export {
   HomeScreen,
