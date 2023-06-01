@@ -147,6 +147,9 @@ devDependencies:
   '@expo/metro-config':
     specifier: ^0.7.1
     version: 0.7.1
+  '@react-native-community/cli-doctor':
+    specifier: ^11.3.1
+    version: 11.3.1
   '@react-native-community/cli-platform-android':
     specifier: ^11.2.3
     version: 11.2.3
@@ -2641,6 +2644,19 @@ packages:
     transitivePeerDependencies:
       - encoding
 
+  /@react-native-community/cli-config@11.3.1:
+    resolution: {integrity: sha512-If4iYuuRIyFl2wMFgZmwC4VhA3K6FoF/ryGEQw4/vxJ70vRcIor420403jUUyBE7Ij5XCUdMEvr9HBM3YdN/OQ==}
+    dependencies:
+      '@react-native-community/cli-tools': 11.3.1
+      chalk: 4.1.2
+      cosmiconfig: 5.2.1
+      deepmerge: 4.3.1
+      glob: 7.2.3
+      joi: 17.9.2
+    transitivePeerDependencies:
+      - encoding
+    dev: true
+
   /@react-native-community/cli-debugger-ui@10.0.0:
     resolution: {integrity: sha512-8UKLcvpSNxnUTRy8CkCl27GGLqZunQ9ncGYhSrWyKrU9SWBJJGeZwi2k2KaoJi5FvF2+cD0t8z8cU6lsq2ZZmA==}
     dependencies:
@@ -2669,6 +2685,31 @@ packages:
       wcwidth: 1.0.1
     transitivePeerDependencies:
       - encoding
+
+  /@react-native-community/cli-doctor@11.3.1:
+    resolution: {integrity: sha512-j8BOeMQFTopDAPcE8RlOMuQLUEUOxCRkwXZR5ynO1sHNndwtnd39PzS4qwKYd6UYTksncGcTDCXRk6ng3cMtng==}
+    dependencies:
+      '@react-native-community/cli-config': 11.3.1
+      '@react-native-community/cli-platform-android': 11.3.1
+      '@react-native-community/cli-platform-ios': 11.3.1
+      '@react-native-community/cli-tools': 11.3.1
+      chalk: 4.1.2
+      command-exists: 1.2.9
+      envinfo: 7.8.1
+      execa: 5.1.1
+      hermes-profile-transformer: 0.0.6
+      ip: 1.1.8
+      node-stream-zip: 1.15.0
+      ora: 5.4.1
+      prompts: 2.4.2
+      semver: 6.3.0
+      strip-ansi: 5.2.0
+      sudo-prompt: 9.2.1
+      wcwidth: 1.0.1
+      yaml: 2.2.2
+    transitivePeerDependencies:
+      - encoding
+    dev: true
 
   /@react-native-community/cli-hermes@10.2.0:
     resolution: {integrity: sha512-urfmvNeR8IiO/Sd92UU3xPO+/qI2lwCWQnxOkWaU/i2EITFekE47MD6MZrfVulRVYRi5cuaFqKZO/ccOdOB/vQ==}
@@ -2704,6 +2745,18 @@ packages:
       - encoding
     dev: true
 
+  /@react-native-community/cli-platform-android@11.3.1:
+    resolution: {integrity: sha512-uUEyfupGtG6/GP4UZzacTEDusbfraocn9vcEft1KhGFWlLPBeaXHoPR3dU956D4256LbCA2qirZNedAGKf6TEQ==}
+    dependencies:
+      '@react-native-community/cli-tools': 11.3.1
+      chalk: 4.1.2
+      execa: 5.1.1
+      glob: 7.2.3
+      logkitty: 0.7.1
+    transitivePeerDependencies:
+      - encoding
+    dev: true
+
   /@react-native-community/cli-platform-ios@10.2.1:
     resolution: {integrity: sha512-hz4zu4Y6eyj7D0lnZx8Mf2c2si8y+zh/zUTgCTaPPLzQD8jSZNNBtUUiA1cARm2razpe8marCZ1QbTMAGbf3mg==}
     dependencies:
@@ -2720,6 +2773,19 @@ packages:
     resolution: {integrity: sha512-AC2hfqwFYuG2ZHXQRHpPDFFZ8IDPcCjpxVJCFi0R9/QNayEH8xsfmVzs1Hd4jKV0JjgCf+jxI/nCtxqreEdl0g==}
     dependencies:
       '@react-native-community/cli-tools': 11.2.3
+      chalk: 4.1.2
+      execa: 5.1.1
+      fast-xml-parser: 4.2.2
+      glob: 7.2.3
+      ora: 5.4.1
+    transitivePeerDependencies:
+      - encoding
+    dev: true
+
+  /@react-native-community/cli-platform-ios@11.3.1:
+    resolution: {integrity: sha512-E6Yzw8mapN8bcP1fPKO/5q+pnyCZcvzNQzKSaCYWj3SrifgeYLJ3lqTNY09Jaf8qn0mDT18NNi0Pg7XOuaINjQ==}
+    dependencies:
+      '@react-native-community/cli-tools': 11.3.1
       chalk: 4.1.2
       execa: 5.1.1
       fast-xml-parser: 4.2.2
@@ -2785,6 +2851,22 @@ packages:
 
   /@react-native-community/cli-tools@11.2.3:
     resolution: {integrity: sha512-sfHflRQRNOShkCUbNOBWvIgBxuO20UEBMHwDVb4Im6bidDHdd4Tby2hlveJ8wCW2r+aDyHKsIN0CeX4vMYhFzQ==}
+    dependencies:
+      appdirsjs: 1.2.7
+      chalk: 4.1.2
+      find-up: 5.0.0
+      mime: 2.6.0
+      node-fetch: 2.6.11
+      open: 6.4.0
+      ora: 5.4.1
+      semver: 6.3.0
+      shell-quote: 1.8.1
+    transitivePeerDependencies:
+      - encoding
+    dev: true
+
+  /@react-native-community/cli-tools@11.3.1:
+    resolution: {integrity: sha512-JuV2RXTemrsl8fwLgw0SYZsMMCcUwxyQWrcuMTds/bBBT0ij6CDVePagyVjbrWzdPbvPoX6Wr1CFKsem2vOfrQ==}
     dependencies:
       appdirsjs: 1.2.7
       chalk: 4.1.2
