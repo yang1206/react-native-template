@@ -1,5 +1,5 @@
-import * as React from 'react';
-import Svg, { Circle, Path } from 'react-native-svg';
+import * as React from 'react'
+import Svg, { Circle, Path } from 'react-native-svg'
 
 export const NoData = () => (
   <Svg
@@ -37,4 +37,4 @@ export const NoData = () => (
     <Circle cx={433.636} cy={105.174} r={20} fill="#7eb55a" />
     <Circle cx={433.636} cy={105.174} r={12.182} fill="#fff" />
   </Svg>
-);
+)

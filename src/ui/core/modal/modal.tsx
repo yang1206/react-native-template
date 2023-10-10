@@ -1,22 +1,22 @@
-import type { BottomSheetModalProps } from '@gorhom/bottom-sheet';
-import { BottomSheetModal } from '@gorhom/bottom-sheet';
-import * as React from 'react';
+import type { BottomSheetModalProps } from '@gorhom/bottom-sheet'
+import { BottomSheetModal } from '@gorhom/bottom-sheet'
+import * as React from 'react'
 
-import { View } from '../view';
-import { renderBackdrop } from './modal-backdrop';
-import { ModalHeader } from './modal-header';
-import type { ModalProps, ModalRef } from './types';
+import { View } from '../view'
+import { renderBackdrop } from './modal-backdrop'
+import { ModalHeader } from './modal-header'
+import type { ModalProps, ModalRef } from './types'
 
 export const useModal = () => {
-  const ref = React.useRef<BottomSheetModal>(null);
+  const ref = React.useRef<BottomSheetModal>(null)
   const present = React.useCallback((data?: any) => {
-    ref.current?.present(data);
-  }, []);
+    ref.current?.present(data)
+  }, [])
   const dismiss = React.useCallback(() => {
-    ref.current?.dismiss();
-  }, []);
-  return { ref, present, dismiss };
-};
+    ref.current?.dismiss()
+  }, [])
+  return { ref, present, dismiss }
+}
 
 export const Modal = React.forwardRef(
   (
@@ -31,14 +31,14 @@ export const Modal = React.forwardRef(
     const detachedProps = React.useMemo(
       () => getDetachedProps(detached),
       [detached]
-    );
-    const modal = useModal();
-    const snapPoints = React.useMemo(() => _snapPoints, [_snapPoints]);
+    )
+    const modal = useModal()
+    const snapPoints = React.useMemo(() => _snapPoints, [_snapPoints])
 
     React.useImperativeHandle(
       ref,
       () => (modal.ref.current as BottomSheetModal) || null
-    );
+    )
 
     const renderHandleComponent = React.useCallback(
       () => (
@@ -48,7 +48,7 @@ export const Modal = React.forwardRef(
         </>
       ),
       [title, modal.dismiss]
-    );
+    )
 
     return (
       <BottomSheetModal
@@ -60,9 +60,9 @@ export const Modal = React.forwardRef(
         backdropComponent={props.backdropComponent || renderBackdrop}
         handleComponent={renderHandleComponent}
       />
-    );
+    )
   }
-);
+)
 
 const getDetachedProps = (detached: boolean) => {
   if (detached) {
@@ -70,7 +70,7 @@ const getDetachedProps = (detached: boolean) => {
       detached: true,
       bottomInset: 46,
       style: { marginHorizontal: 16, overflow: 'hidden' },
-    } as Partial<BottomSheetModalProps>;
+    } as Partial<BottomSheetModalProps>
   }
-  return {} as Partial<BottomSheetModalProps>;
-};
+  return {} as Partial<BottomSheetModalProps>
+}

@@ -1,11 +1,21 @@
 {
+  "common": {
+    "cancel": "cancel"
+  },
   "onboarding": {
     "message": "Welcome to obytes app site"
+  },
+  "permissionManager": {
+    "blocked": "Please go to settings to grant {{permissions}} permission to use this function normally",
+    "camera": "Camera",
+    "openSettings": "Open Settings",
+    "unavailable": "{{permission}} unavailable"
   },
   "settings": {
     "about": "About",
     "app_name": "App Name",
     "arabic": "Arabic",
+    "chinese": "中文",
     "english": "English",
     "generale": "General",
     "github": "Github",

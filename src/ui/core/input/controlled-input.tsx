@@ -1,26 +1,26 @@
-import * as React from 'react';
+import * as React from 'react'
 import type {
   Control,
   FieldValues,
   Path,
   RegisterOptions,
-} from 'react-hook-form';
-import { useController } from 'react-hook-form';
+} from 'react-hook-form'
+import { useController } from 'react-hook-form'
 
-import type { NInputProps } from './input';
-import { Input } from './input';
+import type { NInputProps } from './input'
+import { Input } from './input'
 
 type TRule = Omit<
   RegisterOptions,
   'valueAsNumber' | 'valueAsDate' | 'setValueAs'
->;
+>
 
-export type RuleType<T> = { [name in keyof T]: TRule };
+export type RuleType<T> = { [name in keyof T]: TRule }
 export type InputControllerType<T extends FieldValues> = {
-  name: Path<T>;
-  control: Control<T>;
-  rules?: TRule;
-};
+  name: Path<T>
+  control: Control<T>
+  rules?: TRule
+}
 
 interface ControlledInputProps<T extends FieldValues>
   extends NInputProps,
@@ -30,9 +30,9 @@ interface ControlledInputProps<T extends FieldValues>
 export function ControlledInput<T extends FieldValues>(
   props: ControlledInputProps<T>
 ) {
-  const { name, control, rules, ...inputProps } = props;
+  const { name, control, rules, ...inputProps } = props
 
-  const { field, fieldState } = useController({ control, name, rules });
+  const { field, fieldState } = useController({ control, name, rules })
   return (
     <Input
       ref={field.ref}
@@ -42,5 +42,5 @@ export function ControlledInput<T extends FieldValues>(
       {...inputProps}
       error={fieldState.error?.message}
     />
-  );
+  )
 }

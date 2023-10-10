@@ -1,0 +1,43 @@
+{
+  "common": {
+    "cancel": "取消"
+  },
+  "onboarding": {
+    "message": "欢迎使用obytes app site"
+  },
+  "permissionManager": {
+    "blocked": "请前往设置授予{{permissions}}权限，才能正常使用该功能",
+    "camera": "相机",
+    "openSettings": "打开设置",
+    "unavailable": "{{permission}}功能不可用"
+  },
+  "settings": {
+    "about": "关于",
+    "app_name": "应用名称",
+    "arabic": "Arabic",
+    "chinese": "中文",
+    "english": "English",
+    "generale": "通用",
+    "github": "Github",
+    "language": "语言",
+    "links": "链接",
+    "logout": "退出登录",
+    "more": "更多",
+    "privacy": "隐私协议",
+    "rate": "评分",
+    "share": "分享",
+    "support": "支持",
+    "support_us": "支持我们",
+    "terms": "Terms of Service",
+    "theme": {
+      "dark": "深色模式",
+      "light": "白天模式",
+      "system": "跟随系统",
+      "title": "主题"
+    },
+    "title": "设置",
+    "version": "版本",
+    "website": "Website"
+  },
+  "welcome": "Welcome to obytes app site"
+}

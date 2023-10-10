@@ -1,7 +1,7 @@
-import { styled } from 'nativewind';
-import * as React from 'react';
-import type { SvgProps } from 'react-native-svg';
-import Svg, { Path } from 'react-native-svg';
+import { styled } from 'nativewind'
+import * as React from 'react'
+import type { SvgProps } from 'react-native-svg'
+import Svg, { Path } from 'react-native-svg'
 
 export const Arrow = ({ color = '#000', ...props }: SvgProps) => (
   <Svg width={15} height={15} fill="none" viewBox="0 0 15 15" {...props}>
@@ -10,7 +10,7 @@ export const Arrow = ({ color = '#000', ...props }: SvgProps) => (
       fill={color}
     />
   </Svg>
-);
+)
 
 const _Check = ({ fill = '#000', ...props }: SvgProps) => (
   <Svg width={25} height={24} fill="none" viewBox="0 0 25 24" {...props}>
@@ -22,8 +22,8 @@ const _Check = ({ fill = '#000', ...props }: SvgProps) => (
       strokeLinejoin="round"
     />
   </Svg>
-);
+)
 
 export const Check = styled(_Check, {
   classProps: ['fill'],
-});
+})

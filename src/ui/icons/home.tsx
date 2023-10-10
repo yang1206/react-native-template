@@ -1,6 +1,6 @@
-import * as React from 'react';
-import type { SvgProps } from 'react-native-svg';
-import Svg, { Path } from 'react-native-svg';
+import * as React from 'react'
+import type { SvgProps } from 'react-native-svg'
+import Svg, { Path } from 'react-native-svg'
 
 export function Home({ color = '#000', ...props }: SvgProps) {
   return (
@@ -10,5 +10,5 @@ export function Home({ color = '#000', ...props }: SvgProps) {
         fill={color}
       />
     </Svg>
-  );
+  )
 }

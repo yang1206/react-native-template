@@ -1,36 +1,37 @@
-import * as React from 'react';
+import * as React from 'react'
 
-import { useSelectedLanguage } from '@/core';
-import { translate } from '@/core';
-import type { Language } from '@/core/i18n/resources';
-import type { Option } from '@/ui';
-import { Options, useModal } from '@/ui';
+import { useSelectedLanguage } from '@/locales'
+import { translate } from '@/locales'
+import type { Language } from '@/locales/resources'
+import type { Option } from '@/ui'
+import { Options, useModal } from '@/ui'
 
-import { Item } from './item';
+import { Item } from './item'
 
 export const LanguageItem = () => {
-  const { language, setLanguage } = useSelectedLanguage();
-  const modal = useModal();
+  const { language, setLanguage } = useSelectedLanguage()
+  const modal = useModal()
   const onSelect = React.useCallback(
     (option: Option) => {
-      setLanguage(option.value as Language);
-      modal.dismiss();
+      setLanguage(option.value as Language)
+      modal.dismiss()
     },
     [setLanguage, modal]
-  );
+  )
 
   const langs = React.useMemo(
     () => [
       { label: translate('settings.english'), value: 'en' },
       { label: translate('settings.arabic'), value: 'ar' },
+      { label: translate('settings.chinese'), value: 'zh' },
     ],
     []
-  );
+  )
 
   const selectedLanguage = React.useMemo(
     () => langs.find((lang) => lang.value === language),
     [language, langs]
-  );
+  )
 
   return (
     <>
@@ -46,5 +47,5 @@ export const LanguageItem = () => {
         value={selectedLanguage?.value}
       />
     </>
-  );
-};
+  )
+}

@@ -1,10 +1,10 @@
-import React from 'react';
+import React from 'react'
 
-import { Button, buttonVariants, View } from '@/ui';
+import { Button, buttonVariants, View } from '@/ui'
 
-import { Title } from './title';
+import { Title } from './title'
 
-type variant = keyof typeof buttonVariants;
+type variant = keyof typeof buttonVariants
 
 export const ButtonVariants = () => {
   return (
@@ -20,7 +20,7 @@ export const ButtonVariants = () => {
                 label={`${variant.toUpperCase()} BUTTON`}
                 variant={variant}
               />
-            );
+            )
           })}
         <Button label="Button" loading={true} variant="primary" />
         <Button label="Button" loading={true} variant="outline" />
@@ -32,5 +32,5 @@ export const ButtonVariants = () => {
         />
       </View>
     </>
-  );
-};
+  )
+}

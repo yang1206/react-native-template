@@ -1,7 +1,7 @@
 /* eslint-disable max-lines-per-function */
-import * as React from 'react';
-import type { SvgProps } from 'react-native-svg';
-import Svg, { Circle, Path, Polygon } from 'react-native-svg';
+import * as React from 'react'
+import type { SvgProps } from 'react-native-svg'
+import Svg, { Circle, Path, Polygon } from 'react-native-svg'
 // TODO: should be updated to simple images
 export const Cover = (props: SvgProps) => (
   <Svg data-name="Layer 1" viewBox="0 0 831 729.98934" {...props}>
@@ -214,4 +214,4 @@ export const Cover = (props: SvgProps) => (
       fill="#2f2e41"
     />
   </Svg>
-);
+)

@@ -1,14 +1,14 @@
-import * as React from 'react';
+import * as React from 'react'
 
-import { Pressable } from '../pressable';
-import { Text } from '../text';
-import { View } from '../view';
-import { XClose } from './x-close';
+import { Pressable } from '../pressable'
+import { Text } from '../text'
+import { View } from '../view'
+import { XClose } from './x-close'
 
 type ModalHeaderProps = {
-  title?: string;
-  dismiss: () => void;
-};
+  title?: string
+  dismiss: () => void
+}
 
 export const ModalHeader = React.memo(
   ({ title, dismiss }: ModalHeaderProps) => {
@@ -22,9 +22,9 @@ export const ModalHeader = React.memo(
         </View>
         <CloseButton close={dismiss} />
       </View>
-    );
+    )
   }
-);
+)
 
 const CloseButton = ({ close }: { close: () => void }) => {
   return (
@@ -38,5 +38,5 @@ const CloseButton = ({ close }: { close: () => void }) => {
     >
       <XClose fill="fill-gray-600 dark:fill-gray-300" />
     </Pressable>
-  );
-};
+  )
+}

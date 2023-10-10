@@ -1,4 +1,4 @@
-import { styled } from 'nativewind';
-import { ActivityIndicator as NActivityIndicator } from 'react-native';
+import { styled } from 'nativewind'
+import { ActivityIndicator as NActivityIndicator } from 'react-native'
 
-export const ActivityIndicator = styled(NActivityIndicator);
+export const ActivityIndicator = styled(NActivityIndicator)

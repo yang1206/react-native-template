@@ -1,18 +1,18 @@
-import * as React from 'react';
+import * as React from 'react'
 
-import type { TxKeyPath } from '@/core';
-import { ArrowRight, Text, TouchableOpacity, View } from '@/ui';
+import type { TxKeyPath } from '@/locales'
+import { ArrowRight, Text, TouchableOpacity, View } from '@/ui'
 
 type ItemProps = {
-  text: TxKeyPath;
-  value?: string;
-  onPress?: () => void;
-  icon?: React.ReactNode;
-};
+  text: TxKeyPath
+  value?: string
+  onPress?: () => void
+  icon?: React.ReactNode
+}
 
 export const Item = ({ text, value, icon, onPress }: ItemProps) => {
-  const isPressable = onPress !== undefined;
-  const Container = isPressable ? TouchableOpacity : View;
+  const isPressable = onPress !== undefined
+  const Container = isPressable ? TouchableOpacity : View
   return (
     <Container
       onPress={onPress}
@@ -33,5 +33,5 @@ export const Item = ({ text, value, icon, onPress }: ItemProps) => {
         )}
       </View>
     </Container>
-  );
-};
+  )
+}

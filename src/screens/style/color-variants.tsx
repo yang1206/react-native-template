@@ -1,10 +1,10 @@
-import React from 'react';
+import React from 'react'
 
-import { Text, View } from '@/ui';
-import colors from '@/ui/theme/colors';
+import { Text, View } from '@/ui'
+import colors from '@/ui/theme/colors'
 
-import { Title } from './title';
-type ColorName = keyof typeof colors;
+import { Title } from './title'
+type ColorName = keyof typeof colors
 
 export const ColorVariants = () => {
   return (
@@ -14,11 +14,11 @@ export const ColorVariants = () => {
         <ColorVariant name={name} key={name} />
       ))}
     </>
-  );
-};
+  )
+}
 
 const ColorVariant = ({ name }: { name: ColorName }) => {
-  if (typeof colors[name] === 'string') return null;
+  if (typeof colors[name] === 'string') return null
   return (
     <View className="pt-2">
       <Text variant="md" className="font-medium">
@@ -32,12 +32,12 @@ const ColorVariant = ({ name }: { name: ColorName }) => {
               value={key}
               color={value}
             />
-          );
+          )
         })}
       </View>
     </View>
-  );
-};
+  )
+}
 
 const ColorCard = ({ color, value }: { value: string; color: string }) => {
   return (
@@ -50,5 +50,5 @@ const ColorCard = ({ color, value }: { value: string; color: string }) => {
       </View>
       <Text variant="sm">{color}</Text>
     </View>
-  );
-};
+  )
+}

@@ -1,18 +1,18 @@
 // In Text.tsx
-import { styled } from 'nativewind';
-import React from 'react';
-import type { TextProps } from 'react-native';
-import { StyleSheet, Text as NNText } from 'react-native';
+import { styled } from 'nativewind'
+import React from 'react'
+import type { TextProps } from 'react-native'
+import { StyleSheet, Text as NNText } from 'react-native'
 
-import type { TxKeyPath } from '@/core';
-import { isRTL, translate } from '@/core';
+import type { TxKeyPath } from '@/locales'
+import { isRTL, translate } from '@/locales'
 
-const SText = styled(NNText);
+const SText = styled(NNText)
 
 interface Props extends TextProps {
-  variant?: keyof typeof textVariants;
-  className?: string;
-  tx?: TxKeyPath;
+  variant?: keyof typeof textVariants
+  className?: string
+  tx?: TxKeyPath
 }
 
 export const textVariants = {
@@ -26,7 +26,7 @@ export const textVariants = {
   sm: 'text-[14px] leading-[21px]',
   xs: 'text-[12px] leading-[18px]',
   error: ' text-[12px] leading-[30px] text-danger-500',
-};
+}
 
 export const Text = ({
   variant = 'md',
@@ -36,7 +36,7 @@ export const Text = ({
   children,
   ...props
 }: Props) => {
-  const content = tx ? translate(tx) : children;
+  const content = tx ? translate(tx) : children
   return (
     <SText
       className={`
@@ -53,5 +53,5 @@ export const Text = ({
     >
       {content}
     </SText>
-  );
-};
+  )
+}

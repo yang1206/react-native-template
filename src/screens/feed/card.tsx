@@ -1,9 +1,9 @@
-import React from 'react';
+import React from 'react'
 
-import type { Post } from '@/api';
-import { Image, Pressable, Text, View } from '@/ui';
+import type { Post } from '@/api'
+import { Image, Pressable, Text, View } from '@/ui'
 
-type Props = Post & { onPress?: () => void };
+type Props = Post & { onPress?: () => void }
 
 export const Card = ({ title, body, onPress = () => {} }: Props) => {
   return (
@@ -27,5 +27,5 @@ export const Card = ({ title, body, onPress = () => {} }: Props) => {
         </Text>
       </View>
     </Pressable>
-  );
-};
+  )
+}

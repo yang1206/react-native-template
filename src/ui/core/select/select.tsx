@@ -1,24 +1,24 @@
-import { useColorScheme } from 'nativewind';
-import * as React from 'react';
+import { useColorScheme } from 'nativewind'
+import * as React from 'react'
 
-import colors from '@/ui/theme/colors';
+import colors from '@/ui/theme/colors'
 
-import { useModal } from '../modal';
-import { Text } from '../text';
-import { TouchableOpacity } from '../touchable-opacity';
-import { View } from '../view';
-import { Arrow } from './icons';
-import type { Option } from './options';
-import { Options } from './options';
+import { useModal } from '../modal'
+import { Text } from '../text'
+import { TouchableOpacity } from '../touchable-opacity'
+import { View } from '../view'
+import { Arrow } from './icons'
+import type { Option } from './options'
+import { Options } from './options'
 
 export interface SelectProps {
-  value?: string | number;
-  label?: string;
-  disabled?: boolean;
-  error?: string;
-  options?: Option[];
-  onSelect?: (value: string | number) => void;
-  placeholder?: string;
+  value?: string | number
+  label?: string
+  disabled?: boolean
+  error?: string
+  options?: Option[]
+  onSelect?: (value: string | number) => void
+  placeholder?: string
 }
 
 export const Select = (props: SelectProps) => {
@@ -30,25 +30,25 @@ export const Select = (props: SelectProps) => {
     placeholder = 'select...',
     disabled = false,
     onSelect,
-  } = props;
-  const modal = useModal();
+  } = props
+  const modal = useModal()
 
-  const { colorScheme } = useColorScheme();
-  const isDark = colorScheme === 'dark';
+  const { colorScheme } = useColorScheme()
+  const isDark = colorScheme === 'dark'
   const onSelectOption = React.useCallback(
     (option: Option) => {
-      onSelect?.(option.value);
-      modal.dismiss();
+      onSelect?.(option.value)
+      modal.dismiss()
     },
     [modal, onSelect]
-  );
+  )
 
-  const { borderColor, bgColor, valueColor, labelColor } = useColors(!!error);
+  const { borderColor, bgColor, valueColor, labelColor } = useColors(!!error)
 
   const textValue =
     value !== undefined
       ? options?.filter((t) => t.value === value)?.[0]?.label ?? placeholder
-      : placeholder;
+      : placeholder
 
   return (
     <>
@@ -74,36 +74,36 @@ export const Select = (props: SelectProps) => {
       </View>
       <Options ref={modal.ref} options={options} onSelect={onSelectOption} />
     </>
-  );
-};
+  )
+}
 
 const useColors = (error: boolean) => {
-  const { colorScheme } = useColorScheme();
-  const isDark = colorScheme === 'dark';
+  const { colorScheme } = useColorScheme()
+  const isDark = colorScheme === 'dark'
 
   const borderColor = error
     ? 'border-danger-600'
     : isDark
     ? 'border-charcoal-700'
-    : 'border-neutral-400';
+    : 'border-neutral-400'
 
   const bgColor = isDark
     ? 'bg-charcoal-800'
     : error
     ? 'bg-danger-50'
-    : 'bg-neutral-200';
+    : 'bg-neutral-200'
 
   const labelColor = error
     ? 'text-danger-600'
     : isDark
     ? 'text-charcoal-100'
-    : 'text-black';
+    : 'text-black'
 
   const valueColor = error
     ? 'text-danger-600'
     : isDark
     ? 'text-charcoal-100'
-    : 'text-neutral-600';
+    : 'text-neutral-600'
 
-  return { borderColor, bgColor, labelColor, valueColor } as const;
-};
+  return { borderColor, bgColor, labelColor, valueColor } as const
+}

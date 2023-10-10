@@ -31,7 +31,7 @@ if ENV['NO_FLIPPER'] == '1' then
 elsif podfile_properties.key?('ios.flipper') then
   # Configure Flipper in Podfile.properties.json
   if podfile_properties['ios.flipper'] == 'true' then
-    flipper_config = FlipperConfiguration.enabled(["Debug", "Release"])
+        flipper_config = FlipperConfiguration.enabled(["Debug", "Release"],{ 'Flipper' => '0.182.0' })
   elsif podfile_properties['ios.flipper'] != 'false' then
     flipper_config = FlipperConfiguration.enabled(["Debug", "Release"], { 'Flipper' => podfile_properties['ios.flipper'] })
   end

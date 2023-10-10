@@ -1,24 +1,24 @@
-import React from 'react';
+import React from 'react'
 
-import { translate } from '@/core';
-import type { ColorSchemeType } from '@/hooks';
-import { useSelectedTheme } from '@/hooks';
-import type { Option } from '@/ui';
-import { Options, useModal } from '@/ui';
+import type { ColorSchemeType } from '@/hooks'
+import { useSelectedTheme } from '@/hooks'
+import { translate } from '@/locales'
+import type { Option } from '@/ui'
+import { Options, useModal } from '@/ui'
 
-import { Item } from './item';
+import { Item } from './item'
 
 export const ThemeItem = () => {
-  const { selectedTheme, setSelectedTheme } = useSelectedTheme();
-  const modal = useModal();
+  const { selectedTheme, setSelectedTheme } = useSelectedTheme()
+  const modal = useModal()
 
   const onSelect = React.useCallback(
     (option: Option) => {
-      setSelectedTheme(option.value as ColorSchemeType);
-      modal.dismiss();
+      setSelectedTheme(option.value as ColorSchemeType)
+      modal.dismiss()
     },
     [setSelectedTheme, modal]
-  );
+  )
 
   const themes = React.useMemo(
     () => [
@@ -27,12 +27,12 @@ export const ThemeItem = () => {
       { label: `${translate('settings.theme.system')} ⚙️`, value: 'system' },
     ],
     []
-  );
+  )
 
   const theme = React.useMemo(
     () => themes.find((t) => t.value === selectedTheme),
     [selectedTheme, themes]
-  );
+  )
 
   return (
     <>
@@ -48,5 +48,5 @@ export const ThemeItem = () => {
         value={theme?.value}
       />
     </>
-  );
-};
+  )
+}

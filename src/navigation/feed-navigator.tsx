@@ -1,26 +1,26 @@
-import { useNavigation } from '@react-navigation/native';
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import * as React from 'react';
+import { useNavigation } from '@react-navigation/native'
+import { createNativeStackNavigator } from '@react-navigation/native-stack'
+import * as React from 'react'
 
-import { AddPost, Feed, Post } from '@/screens';
-import { Pressable, Text } from '@/ui';
+import { AddPost, Feed, Post } from '@/screens'
+import { Pressable, Text } from '@/ui'
 
 export type FeedStackParamList = {
-  Feed: undefined;
-  Post: { id: number };
-  AddPost: undefined;
-};
+  Feed: undefined
+  Post: { id: number }
+  AddPost: undefined
+}
 
-const Stack = createNativeStackNavigator<FeedStackParamList>();
+const Stack = createNativeStackNavigator<FeedStackParamList>()
 
 const GoToAddPost = () => {
-  const { navigate } = useNavigation();
+  const { navigate } = useNavigation()
   return (
     <Pressable onPress={() => navigate('AddPost')} className="p-2">
       <Text className="text-primary-300">Create</Text>
     </Pressable>
-  );
-};
+  )
+}
 
 export const FeedNavigator = () => {
   return (
@@ -37,5 +37,5 @@ export const FeedNavigator = () => {
 
       <Stack.Screen name="AddPost" component={AddPost} />
     </Stack.Navigator>
-  );
-};
+  )
+}

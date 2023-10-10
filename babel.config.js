@@ -1,5 +1,5 @@
 module.exports = function (api) {
-  api.cache(true);
+  api.cache(true)
   return {
     presets: ['babel-preset-expo'],
     plugins: [
@@ -9,7 +9,7 @@ module.exports = function (api) {
           root: ['./'],
           alias: {
             '@': './src',
-            '@env': './src/core/env.js',
+            '@env': './src/utils/env.js',
           },
           extensions: [
             '.ios.ts',
@@ -27,5 +27,5 @@ module.exports = function (api) {
       ['nativewind/babel', { mode: 'compileOnly' }],
       'react-native-reanimated/plugin',
     ],
-  };
-};
+  }
+}

@@ -1,11 +1,11 @@
-import React from 'react';
+import React from 'react'
 
-import { FocusAwareStatusBar, ScrollView, View } from '@/ui';
+import { FocusAwareStatusBar, ScrollView, View } from '@/ui'
 
-import { ButtonVariants } from './button-variants';
-import { ColorVariants } from './color-variants';
-import { InputVariants } from './input-variants';
-import { TextVariants } from './text-variants';
+import { ButtonVariants } from './button-variants'
+import { ColorVariants } from './color-variants'
+import { InputVariants } from './input-variants'
+import { TextVariants } from './text-variants'
 
 export const Style = () => {
   return (
@@ -20,5 +20,5 @@ export const Style = () => {
         </View>
       </ScrollView>
     </>
-  );
-};
+  )
+}

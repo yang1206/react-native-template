@@ -1,7 +1,7 @@
-import * as React from 'react';
+import * as React from 'react'
 
-import { Button, Text, View } from '../core';
-import { Screen } from '../screen';
+import { Button, Text, View } from '../core'
+import { Screen } from '../screen'
 
 export function ErrorFallback({ resetErrorBoundary }: any) {
   return (
@@ -11,5 +11,5 @@ export function ErrorFallback({ resetErrorBoundary }: any) {
         <Button label="try Again" onPress={resetErrorBoundary} />
       </View>
     </Screen>
-  );
+  )
 }

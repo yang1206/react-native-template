@@ -1,10 +1,10 @@
-import React from 'react';
+import React from 'react'
 
-import { Text, textVariants, View } from '@/ui';
+import { Text, textVariants, View } from '@/ui'
 
-import { Title } from './title';
+import { Title } from './title'
 
-type variant = keyof typeof textVariants;
+type variant = keyof typeof textVariants
 
 export const TextVariants = () => {
   return (
@@ -26,9 +26,9 @@ export const TextVariants = () => {
                   {variant.toUpperCase()} Text
                 </Text>
               </View>
-            );
+            )
           })}
       </View>
     </>
-  );
-};
+  )
+}

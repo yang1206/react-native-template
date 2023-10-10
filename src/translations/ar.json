@@ -1,11 +1,21 @@
 {
+  "common": {
+    "cancel": "取消"
+  },
   "onboarding": {
     "message": "مرحبا بكم في موقع تطبيق obytes"
+  },
+  "permissionManager": {
+    "blocked": "请前往设置授予{{permissions}}权限，才能正常使用该功能",
+    "camera": "相机",
+    "openSettings": "打开设置",
+    "unavailable": "{{permission}}功能不可用"
   },
   "settings": {
     "about": "حول التطبيق ",
     "app_name": "اسم التطبيق",
     "arabic": "عربي",
+    "chinese": "中文",
     "english": "إنجليزي",
     "generale": "عام",
     "github": "جيثب",

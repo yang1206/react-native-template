@@ -1,34 +1,34 @@
-import type { BottomSheetModal } from '@gorhom/bottom-sheet';
-import { BottomSheetFlatList } from '@gorhom/bottom-sheet';
-import { useColorScheme } from 'nativewind';
-import * as React from 'react';
-import { type PressableProps } from 'react-native';
+import type { BottomSheetModal } from '@gorhom/bottom-sheet'
+import { BottomSheetFlatList } from '@gorhom/bottom-sheet'
+import { useColorScheme } from 'nativewind'
+import * as React from 'react'
+import { type PressableProps } from 'react-native'
 
-import { colors } from '@/ui/theme';
+import { colors } from '@/ui/theme'
 
-import { Modal } from '../modal';
-import { Pressable } from '../pressable';
-import { Text } from '../text';
-import { Check } from './icons';
+import { Modal } from '../modal'
+import { Pressable } from '../pressable'
+import { Text } from '../text'
+import { Check } from './icons'
 
-export type Option = { label: string; value: string | number };
+export type Option = { label: string; value: string | number }
 
 type OptionsProps = {
-  options: Option[];
-  onSelect: (option: Option) => void;
-  value?: string | number;
-};
+  options: Option[]
+  onSelect: (option: Option) => void
+  value?: string | number
+}
 
 function keyExtractor(item: Option) {
-  return `select-item-${item.value}`;
+  return `select-item-${item.value}`
 }
 
 export const Options = React.forwardRef<BottomSheetModal, OptionsProps>(
   ({ options, onSelect, value }, ref) => {
-    const height = options.length * 70 + 100;
-    const snapPoints = React.useMemo(() => [height], [height]);
-    const { colorScheme } = useColorScheme();
-    const isDark = colorScheme === 'dark';
+    const height = options.length * 70 + 100
+    const snapPoints = React.useMemo(() => [height], [height])
+    const { colorScheme } = useColorScheme()
+    const isDark = colorScheme === 'dark'
     const renderSelectItem = React.useCallback(
       ({ item }: { item: Option }) => (
         <Option
@@ -39,7 +39,7 @@ export const Options = React.forwardRef<BottomSheetModal, OptionsProps>(
         />
       ),
       [onSelect, value]
-    );
+    )
 
     return (
       <Modal
@@ -56,9 +56,9 @@ export const Options = React.forwardRef<BottomSheetModal, OptionsProps>(
           renderItem={renderSelectItem}
         />
       </Modal>
-    );
+    )
   }
-);
+)
 
 const Option = React.memo(
   ({
@@ -66,8 +66,8 @@ const Option = React.memo(
     selected = false,
     ...props
   }: PressableProps & {
-    selected?: boolean;
-    label: string;
+    selected?: boolean
+    label: string
   }) => {
     return (
       <Pressable
@@ -79,6 +79,6 @@ const Option = React.memo(
         </Text>
         {selected && <Check fill="fill-black dark:fill-white" />}
       </Pressable>
-    );
+    )
   }
-);
+)

@@ -1,18 +1,26 @@
-import { NavigationContainer as RNNavigationContainer } from '@react-navigation/native';
-import * as React from 'react';
-import { SafeAreaProvider } from 'react-native-safe-area-context';
+import { useFlipper } from '@react-navigation/devtools'
+import {
+  createNavigationContainerRef,
+  NavigationContainer as RNNavigationContainer,
+} from '@react-navigation/native'
+import * as React from 'react'
+import {
+  initialWindowMetrics,
+  SafeAreaProvider,
+} from 'react-native-safe-area-context'
 
-import { useThemeConfig } from './use-theme-config';
+import type { NavigationProps } from './root-navigator'
+import { useThemeConfig } from './use-theme-config'
+export const navigationRef = createNavigationContainerRef()
 
-export const NavigationContainer = ({
-  children,
-}: {
-  children: React.ReactNode;
-}) => {
-  const theme = useThemeConfig();
+export const NavigationContainer = (props: NavigationProps) => {
+  useFlipper(navigationRef)
+  const theme = useThemeConfig()
   return (
-    <SafeAreaProvider>
-      <RNNavigationContainer theme={theme}>{children}</RNNavigationContainer>
+    <SafeAreaProvider initialMetrics={initialWindowMetrics}>
+      <RNNavigationContainer ref={navigationRef} {...props} theme={theme}>
+        {props.children}
+      </RNNavigationContainer>
     </SafeAreaProvider>
-  );
-};
+  )
+}

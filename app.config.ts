@@ -1,7 +1,7 @@
 /* eslint-disable max-lines-per-function */
-import type { ConfigContext, ExpoConfig } from '@expo/config';
+import type { ConfigContext, ExpoConfig } from '@expo/config'
 
-import { ClientEnv, Env } from './env';
+import { ClientEnv, Env } from './env'
 
 export default ({ config }: ConfigContext): ExpoConfig => ({
   ...config,
@@ -73,4 +73,4 @@ export default ({ config }: ConfigContext): ExpoConfig => ({
       projectId: Env.EAS_PROJECT_ID,
     },
   },
-});
+})

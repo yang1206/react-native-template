@@ -1,8 +1,8 @@
-import * as React from 'react';
-import type { SvgProps } from 'react-native-svg';
-import Svg, { Path } from 'react-native-svg';
+import * as React from 'react'
+import type { SvgProps } from 'react-native-svg'
+import Svg, { Path } from 'react-native-svg'
 
-import { colors } from '../theme';
+import { colors } from '../theme'
 
 export const Share = ({ color = colors.neutral[500], ...props }: SvgProps) => (
   <Svg width={24} height={24} fill="none" viewBox="0 0 24 24" {...props}>
@@ -13,4 +13,4 @@ export const Share = ({ color = colors.neutral[500], ...props }: SvgProps) => (
       fill={color}
     />
   </Svg>
-);
+)

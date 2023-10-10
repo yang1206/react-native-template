@@ -13,4 +13,4 @@ module.exports = {
       .map((filename) => `"${filename}"`)
       .join(' ')}`,
   ],
-};
+}

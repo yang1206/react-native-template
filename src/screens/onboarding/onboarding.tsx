@@ -1,11 +1,11 @@
-import React from 'react';
+import React from 'react'
 
-import { useIsFirstTime } from '@/hooks';
-import { Button, FocusAwareStatusBar, SafeAreaView, Text, View } from '@/ui';
+import { useIsFirstTime } from '@/hooks'
+import { Button, FocusAwareStatusBar, SafeAreaView, Text, View } from '@/ui'
 
-import { Cover } from './cover';
+import { Cover } from './cover'
 export const Onboarding = () => {
-  const [_, setIsFirstTime] = useIsFirstTime();
+  const [_, setIsFirstTime] = useIsFirstTime()
   return (
     <View className="flex h-full items-center  justify-center">
       <FocusAwareStatusBar />
@@ -37,10 +37,10 @@ export const Onboarding = () => {
         <Button
           label="Let's Get Started "
           onPress={() => {
-            setIsFirstTime(false);
+            setIsFirstTime(false)
           }}
         />
       </SafeAreaView>
     </View>
-  );
-};
+  )
+}

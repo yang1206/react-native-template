@@ -1,12 +1,12 @@
-import React from 'react';
+import React from 'react'
 
-import type { TxKeyPath } from '@/core';
-import { Text, View } from '@/ui';
+import type { TxKeyPath } from '@/locales'
+import { Text, View } from '@/ui'
 
 type Props = {
-  children: React.ReactNode;
-  title?: TxKeyPath;
-};
+  children: React.ReactNode
+  title?: TxKeyPath
+}
 
 export const ItemsContainer = ({ children, title }: Props) => {
   return (
@@ -18,5 +18,5 @@ export const ItemsContainer = ({ children, title }: Props) => {
         </View>
       }
     </>
-  );
-};
+  )
+}

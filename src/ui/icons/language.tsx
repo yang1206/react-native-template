@@ -1,6 +1,6 @@
-import React from 'react';
-import type { SvgProps } from 'react-native-svg';
-import Svg, { G, Path, Text, TSpan } from 'react-native-svg';
+import React from 'react'
+import type { SvgProps } from 'react-native-svg'
+import Svg, { G, Path, Text, TSpan } from 'react-native-svg'
 
 export const Language = ({ ...props }: SvgProps) => (
   <Svg width={100} height={71} {...props}>
@@ -30,4 +30,4 @@ export const Language = ({ ...props }: SvgProps) => (
       </Text>
     </G>
   </Svg>
-);
+)

@@ -1,4 +1,4 @@
-const path = require('path');
+const path = require('path')
 
 module.exports = {
   // Configuration for JavaScript files
@@ -10,6 +10,7 @@ module.exports = {
       {
         singleQuote: true,
         endOfLine: 'auto',
+        semi: false, // 禁止分号
       },
     ],
     'unicorn/filename-case': [
@@ -44,23 +45,25 @@ module.exports = {
           {
             singleQuote: true,
             endOfLine: 'auto',
+            semi: false, // 禁止分号
           },
         ],
-        'max-params': ['error', 3], // Limit the number of parameters in a function to use object instead
+        semi: [2, 'never'],
+        'max-params': ['error', 3],
         'max-lines-per-function': ['error', 70],
-        'react/destructuring-assignment': 'off', // Vscode doesn't support automatically destructuring, it's a pain to add a new variable
-        'react/require-default-props': 'off', // Allow non-defined react props as undefined
-        '@typescript-eslint/comma-dangle': 'off', // Avoid conflict rule between Eslint and Prettier
-        '@typescript-eslint/consistent-type-imports': 'error', // Ensure `import type` is used when it's necessary
-        'import/prefer-default-export': 'off', // Named export is easier to refactor automatically
+        'react/destructuring-assignment': 'off',
+        'react/require-default-props': 'off',
+        '@typescript-eslint/comma-dangle': 'off',
+        '@typescript-eslint/consistent-type-imports': 'error',
+        'import/prefer-default-export': 'off',
         'tailwindcss/classnames-order': [
           'warn',
           {
             officialSorting: true,
           },
-        ], // Follow the same ordering as the official plugin `prettier-plugin-tailwindcss`
-        'simple-import-sort/imports': 'error', // Import configuration for `eslint-plugin-simple-import-sort`
-        'simple-import-sort/exports': 'error', // Export configuration for `eslint-plugin-simple-import-sort`
+        ],
+        'simple-import-sort/imports': 'error',
+        'simple-import-sort/exports': 'error',
         '@typescript-eslint/no-unused-vars': 'off',
         'tailwindcss/no-custom-classname': 'off',
         'unused-imports/no-unused-imports': 'error',
@@ -74,7 +77,7 @@ module.exports = {
         ],
       },
     },
-    // Configuration for  translations files (i18next)
+    // Configuration for translations files (i18next)
     {
       files: ['src/translations/*.json'],
       extends: ['plugin:i18n-json/recommended'],
@@ -104,9 +107,10 @@ module.exports = {
           {
             singleQuote: true,
             endOfLine: 'auto',
+            semi: false, // 禁止分号
           },
         ],
       },
     },
   ],
-};
+}
